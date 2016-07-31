@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>React Template with CDN Resources - JSX, redux, react-router</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!--<script src="https://fb.me/react-15.0.0.js"></script>-->
+    <script src="https://fb.me/react-with-addons-15.0.0.js"></script>
+    <script src="https://fb.me/react-dom-15.0.0.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-router/2.6.0/ReactRouter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+	<!--NOTE: script type must be 'text/babel'-->
+
+	<script type="text/babel">
+		console.log('start');
+		// Not needed when using CDN resources
+//		import React from 'react';
+//		import Router from 'react-router';
+//		import { DefaultRoute, Link, Route, RouteHandler } from 'react-router';
+//		import LoginHandler from './components/Login.js';
+//		let React = window.React;
+//		let ReactDOM = window.ReactDOM;
+
+		let Component = React.Component;
+
+		let Route = ReactRouter.Route;
+		let Router = ReactRouter.Router;
+		let hashHistory = ReactRouter.hashHistory;
+		let Link = ReactRouter.Link;
+		let IndexRoute = ReactRouter.IndexRoute;
+		let browserHistory = ReactRouter.browserHistory;
+
+		class App extends Component {
+			render() {
+				console.log('##App');
+				return(
+					<div>
+						<h1>App</h1>
+						<Link to="about">About</Link>
+						{' / '}
+						<Link to="asdf">No Match</Link>
+					</div>
+				);
+			}
+		}
+		class About extends Component {
+			render() {
+				console.log('##About');
+				return(
+					<div>
+						<h1>About</h1>
+						<Link to="/">Home</Link>
+						{' / '}
+						<Link to="asdf">No Match</Link>
+					</div>
+				);
+			}
+		}
+		class NoMatch extends Component {
+			render() {
+				console.log('##NoMatch');
+				return(
+					<div>
+						<h1>No Match</h1>
+						<Link to="/">Home</Link>
+						{' / '}
+						<Link to="about">About</Link>
+					</div>
+				);
+			}
+		}
+
+		// Declarative route configuration (could also load this config lazily
+		// instead, all you really need is a single root route, you don't need to
+		// colocate the entire config).
+		ReactDOM.render((
+		  <Router history={browserHistory}>
+			<Route path="/" component={App} />
+			<Route path="about" component={About} />
+			<Route path="*" component={NoMatch} />
+		  </Router>
+		), document.getElementById('app'));
+		console.log('done');
+	</script>
+  </body>
+</html>
