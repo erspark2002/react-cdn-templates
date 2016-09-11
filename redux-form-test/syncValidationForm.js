@@ -42,11 +42,25 @@ const validate = values => {
 const SyncValidationForm = (props) => {
 	console.log('--> SyncValidationForm props:', props);
 	const { handleSubmit, pristine, reset, submitting, fields: {username}, errors } = props;
-	console.log('#username:', username);
+	// console.log('#username:', username);
+	// console.log('#handleSubmit:', handleSubmit);
 
+	// const onSubmit = () => (data) => {
+	// const onSubmit = event => {
+	const onSubmit = props => event => {
+		event.preventDefault();
+		event.stopPropagation();
+
+		const {username} = props.fields;
+		console.log('#onSubmit');
+		console.log('  #username:', username.value);
+
+		return false;
+	};
 					// {touched && error && <span>{errors.username}</span>}
+					// <form onSubmit={handleSubmit(onSubmit)}>
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={onSubmit(props)}>
 			<div>
 				<label>Username:</label>
 				<div>
