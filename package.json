@@ -1,0 +1,15 @@
+{
+  "name": "eslint-demo2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robin Spark <robin.spark@gmail.com> (https://github.com/erspark2002?tab=repositories)",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "eslint-plugin-react": "^6.2.0"
+  }
+}

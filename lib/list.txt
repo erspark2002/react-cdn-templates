@@ -1,0 +1,19 @@
+total 5504
+drwxr-xr-x  18 robinspark  staff     612  9 Sep 18:10 .
+drwxr-xr-x   7 robinspark  staff     238  9 Sep 17:56 ..
+-rw-r--r--   1 robinspark  staff  896406  6 Sep 07:07 babel-core-5.8.34.min.js
+-rw-r--r--   1 robinspark  staff       0  9 Sep 18:10 list.txt
+-rw-r--r--   1 robinspark  staff  655607  6 Sep 07:07 react-15.0.0.js
+-rw-r--r--   1 robinspark  staff    1170  6 Sep 07:07 react-dom-0.14.0.js
+-rw-r--r--   1 robinspark  staff    1174  6 Sep 07:07 react-dom-15.0.0.js
+-rw-r--r--   1 robinspark  staff    5646  6 Sep 07:07 react-redux-4.4.5.js
+-rw-r--r--   1 robinspark  staff   10060  6 Sep 07:07 react-redux-4.4.5.min.js
+-rw-r--r--   1 robinspark  staff  172748  6 Sep 07:07 react-router-2.6.0.js
+-rw-r--r--   1 robinspark  staff  715245  6 Sep 07:07 react-with-addons-15.0.0.js
+-rw-r--r--   1 robinspark  staff   21605  6 Sep 07:07 redux-3.0.4.js
+-rw-r--r--   1 robinspark  staff    5398  6 Sep 07:07 redux-3.0.4.min.js
+-rw-r--r--@  1 robinspark  staff  215692  9 Sep 18:01 redux-form-6.0.2.js
+-rw-r--r--@  1 robinspark  staff   75170  9 Sep 18:00 redux-form-6.0.2.min.js
+-rw-r--r--   1 robinspark  staff     309  6 Sep 07:07 redux-thunk-1.0.3.js
+-rw-r--r--   1 robinspark  staff    2430  6 Sep 07:07 redux-thunk-2.1.0.js
+-rw-r--r--   1 robinspark  staff     692  6 Sep 07:07 redux-thunk-2.1.0.min.js
