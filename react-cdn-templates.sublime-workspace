@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"ren",
+				"renderField"
+			],
+			[
+				"is",
+				"isRequired"
+			],
+			[
+				"valid",
+				"validationRules"
+			],
+			[
+				"valida",
+				"validationRules"
+			],
+			[
+				"req",
+				"requiredFields"
+			],
+			[
+				"val",
+				"validate"
+			],
+			[
+				"REG",
+				"REGEX_EMAIL"
+			],
+			[
+				"a",
+				"age"
+			],
+			[
+				"fir",
+				"firstName"
+			],
+			[
+				"sr",
+				"src"
+			],
+			[
+				"stop",
+				"stopPropagation()	Event"
+			],
+			[
 				"rubb",
 				"rubberBand	(index.html)"
 			],
@@ -148,34 +192,122 @@
 	"buffers":
 	[
 		{
+			"file": "redux-form-test/form_05c.js",
+			"settings":
+			{
+				"buffer_size": 4810,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "redux-form-test/syncValidationForm.js",
+			"settings":
+			{
+				"buffer_size": 3261,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "redux-form-test/form_05b.js",
+			"settings":
+			{
+				"buffer_size": 3947,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 604,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "redux-form-test/readme.txt",
+			"settings":
+			{
+				"buffer_size": 44,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "redux-form-test/form_05.js",
+			"settings":
+			{
+				"buffer_size": 2915,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "redux-form-test/form_04.js",
+			"settings":
+			{
+				"buffer_size": 2071,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "redux-form-test/form_04b.js",
+			"settings":
+			{
+				"buffer_size": 2042,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "redux-form-test/form_02b.js",
+			"settings":
+			{
+				"buffer_size": 4154,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "redux-form-test/form_02b.html",
+			"settings":
+			{
+				"buffer_size": 2260,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "redux-form-test/form_04.html",
+			"settings":
+			{
+				"buffer_size": 2325,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "redux-form-test/form-01_basic.html",
 			"settings":
 			{
-				"buffer_size": 1875,
+				"buffer_size": 1942,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "redux-form-test/form-01.js",
+			"file": "redux-form-test/form_02.js",
 			"settings":
 			{
-				"buffer_size": 1750,
+				"buffer_size": 4150,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": ".eslintrc.json",
+			"file": "redux-form-test/form_03.js",
 			"settings":
 			{
-				"buffer_size": 689,
+				"buffer_size": 4131,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/Users/Robin/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+			"file": "redux-form-test/form_03.html",
 			"settings":
 			{
-				"buffer_size": 1760,
+				"buffer_size": 1955,
 				"line_ending": "Unix"
 			}
 		}
@@ -187,8 +319,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "in",
+		"height": 219.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -244,7 +376,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 416.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -271,7 +403,23 @@
 	],
 	"file_history":
 	[
+		"/C/github/react-cdn-templates/redux-form-test/syncValidationForm.html",
 		"/C/github/react-cdn-templates/redux-form-test/form-01.js",
+		"/C/github/react-cdn-templates/redux-form-test/form-02_inputs.html",
+		"/C/github/react-cdn-templates/redux-form-test/form_02.html",
+		"/C/Junk/sed/file_01.html",
+		"/C/Junk/sed/a",
+		"/C/github/react-cdn-templates/.eslintrc.json",
+		"/C/Users/Robin/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/github/react-cdn-templates/redux-form-test/form_inputs_02.html",
+		"/C/github/react-cdn-templates/redux-form-test/form-02.js",
+		"/C/github/react-cdn-templates/redux-form-test/form_03.html",
+		"/C/Junk/sed/dup.bat",
+		"/C/Junk/sed/dup_html.bat",
+		"/C/Junk/sed/file_03.html",
+		"/C/Junk/sed/file_03.js",
+		"/C/Junk/sed/file_02.html",
+		"/C/Junk/sed/file_01.js",
 		"/C/react/tonline-spc_latest/src/helpers/same-origin-fsa-strategy.js",
 		"/C/react/tonline-spc_latest/src/redux/modules/searchStores.js",
 		"/C/react/tonline-spc_latest/src/api/delivery.js",
@@ -382,23 +530,7 @@
 		"/C/Users/Robin/AppData/Roaming/Sublime Text 3/Packages/User/console-log-json.sublime-snippet",
 		"/C/react/tonline-spc/src/components/ToDoGaeron/ToDoGaeron.js",
 		"/C/react/tonline-spc/src/components/ToDoGaeron/VisibleTodoList.js",
-		"/C/react/tonline-spc/src/components/ToDoGaeron/TodoItem.js",
-		"/C/Users/Robin/AppData/Roaming/Sublime Text 3/Packages/User/html-ul.sublime-snippet",
-		"/C/Users/Robin/AppData/Roaming/Sublime Text 3/Packages/User/html-li.sublime-snippet",
-		"/C/Users/Robin/AppData/Roaming/Sublime Text 3/Packages/User/html-p.sublime-snippet",
-		"/C/react/tonline-spc/src/components/ToDoGaeron/FilterLinkCompleted.js",
-		"/C/react/tonline-spc/src/components/ToDoGaeron2/AddTodo.js",
-		"/C/react/tonline-spc/src/components/ToDoGaeron/index.js",
-		"/C/react/tonline-spc/src/components/ToDoGaeron_prac1/index.js",
-		"/C/react/tonline-spc/src/components/AddressForm/AddressForm.js",
-		"/C/react/tonline-spc/src/components/CustomerEmailSearch/CustomerEmailSearch.js",
-		"/C/react/tonline-spc/node_modules/flux-standard-action/package.json",
-		"/C/react/tonline-spc/src/components/ToDoGaeron/App.js",
-		"/C/react/tonline-spc/src/components/Checkout/Checkout.js",
-		"/C/react/tonline-spc/src/components/TelephoneInputField/index.js",
-		"/C/react/tonline-spc/src/components/WebFrame/WebFrame.js",
-		"/C/react/tonline-spc/src/components/CustomerGreeting/CustomerGreeting.js",
-		"/C/react/tonline-spc/src/components/PickupStore/PickupStore.js"
+		"/C/react/tonline-spc/src/components/ToDoGaeron/TodoItem.js"
 	],
 	"find":
 	{
@@ -409,6 +541,8 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"C:\\github\\react-cdn-templates\\redux-form-test,*.js",
+			"C:\\github\\react-cdn-templates\\redux-form-test",
 			"C:\\react\\tonline-spc_latest\\src",
 			"C:\\react\\tonline-spc_latest\\src\\redux,-*.spec.js",
 			"C:\\react\\tonline-spc_latest\\src\\redux",
@@ -436,6 +570,40 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"  ",
+			"reduce",
+			"'\\n",
+			"  ",
+			"values[fieldName]",
+			"'",
+			"options",
+			"validationRules",
+			"handleSubmit data",
+			"#handleSubmit",
+			"handleSub",
+			"span",
+			"username",
+			"Email",
+			"notes:",
+			"Field",
+			"simpleForm",
+			"data",
+			"props",
+			"SimpleForm",
+			"_onSubmit",
+			"notes:",
+			"Description:",
+			"1",
+			"username",
+			"args",
+			"method",
+			"post",
+			"pristine || submitting",
+			"form",
+			"jsx",
+			"  ",
+			"tab",
+			"linebreak",
 			"paths",
 			"node",
 			"react",
@@ -529,41 +697,7 @@
 			"isInternational",
 			"react-transact",
 			"classnames",
-			"suitcssify",
-			"classnames",
-			"react-sel",
-			")}",
-			"Detail",
-			"props",
-			"refac",
-			"FilterLinkActive",
-			"SHOW_ACTIVE",
-			"FilterLinkActive",
-			"active",
-			"SHOW_ACTIVE",
-			"FilterLinkActive",
-			"children",
-			"FilterLinkAll",
-			" ",
-			"active",
-			"addTodo",
-			"ToDoGaeron3",
-			"todos",
-			"all",
-			"setVisibilityAll",
-			"FilterLinkAll",
-			"setVisibilityActive",
-			"=",
-			"completed",
-			"FilterLinkAll",
-			"ACTIVE",
-			"SHOW_ALL",
-			"FilterLink",
-			"active",
-			"changeFilterLink",
-			"toggleTodo",
-			"middleware",
-			"ga"
+			"suitcssify"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -571,6 +705,9 @@
 		"regex": true,
 		"replace_history":
 		[
+			"\\t",
+			"';\\n",
+			"\\t",
 			"",
 			"FilterLinkCompleted",
 			"SHOW_ALL",
@@ -588,7 +725,7 @@
 			"transfer"
 		],
 		"reverse": false,
-		"show_context": true,
+		"show_context": false,
 		"use_buffer2": true,
 		"whole_word": false,
 		"wrap": true
@@ -601,19 +738,456 @@
 			[
 				{
 					"buffer": 0,
-					"file": "redux-form-test/form-01_basic.html",
+					"file": "redux-form-test/form_05c.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1875,
+						"buffer_size": 4810,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								148,
-								148
+								0,
+								270
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright (SL) (Colorcoded) (Colorcoded).tmTheme",
+							"colorcode": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "redux-form-test/syncValidationForm.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3261,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1914,
+								1914
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright (SL) (Colorcoded) (Colorcoded).tmTheme",
+							"colorcode": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 782.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "redux-form-test/form_05b.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3947,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3947,
+								3563
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright (SL) (Colorcoded) (Colorcoded).tmTheme",
+							"colorcode": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1826.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 604,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								604,
+								604
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright (SL) (Colorcoded) (Colorcoded).tmTheme",
+							"colorcode": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "redux-form-test/readme.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 44,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22,
+								22
+							]
+						],
+						"settings":
+						{
+							"colorcode": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "redux-form-test/form_05.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2915,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								505,
+								505
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright (SL) (Colorcoded) (Colorcoded).tmTheme",
+							"colorcode": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "redux-form-test/form_04.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2071,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								360,
+								360
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright (SL) (Colorcoded) (Colorcoded).tmTheme",
+							"colorcode": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "redux-form-test/form_04b.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2042,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1053,
+								1053
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright (SL) (Colorcoded) (Colorcoded).tmTheme",
+							"colorcode": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "redux-form-test/form_02b.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4154,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3539,
+								3539
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright (SL) (Colorcoded) (Colorcoded).tmTheme",
+							"colorcode": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1453.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "redux-form-test/form_02b.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2260,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1508,
+								1088
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright (SL) (Colorcoded) (Colorcoded).tmTheme",
+							"colorcode": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 13.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "redux-form-test/form_04.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1466,
+								1482
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright (SL) (Colorcoded) (Colorcoded).tmTheme",
+							"colorcode": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 8.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "redux-form-test/form-01_basic.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1942,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32,
+								32
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright (SL) (Colorcoded) (Colorcoded).tmTheme",
+							"colorcode": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "redux-form-test/form_02.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2900,
+								2900
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright (SL) (Colorcoded) (Colorcoded).tmTheme",
+							"colorcode": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1319.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "redux-form-test/form_03.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3256,
+								3256
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright (SL) (Colorcoded) (Colorcoded).tmTheme",
+							"colorcode": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 1571.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "redux-form-test/form_03.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1955,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1921,
+								1921
 							]
 						],
 						"settings":
@@ -629,100 +1203,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "redux-form-test/form-01.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1750,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"colorcode": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": ".eslintrc.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 689,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								334,
-								334
-							]
-						],
-						"settings":
-						{
-							"colorcode": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/Users/Robin/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1760,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1026,
-								1026
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright (SL) (Colorcoded) (Colorcoded).tmTheme",
-							"colorcode": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -771,7 +1251,7 @@
 	"project": "react-cdn-templates.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":

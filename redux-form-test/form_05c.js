@@ -62,6 +62,7 @@ const emailValidator = (message = 'Please enter a valid email address') => value
 
 // Handle 'required' validators, and custom validators
 const validate = rules => values => {
+// const validate = () => rules => values => {
 	console.log('#validate');
 	console.log('  #rules:', rules);
 	console.log('  #values:', values);
@@ -93,7 +94,7 @@ class ContactForm extends Component {
 	}
 	// called when valid.
 	handleSubmit(data) {
-		console.log('#handleSubmit data:', data);
+		console.log('#this.handleSubmit data:', data);
 		// alert('submitted');
 		console.log('#this.props.dispatch:', this.props.dispatch);
 		console.log('done handleSubmit');
@@ -102,12 +103,15 @@ class ContactForm extends Component {
 	}
 
 	render() {
-		console.log('#this.props:', this.props);
+		console.log('#this.props 222:', this.props);
 		const {fields: {firstName, lastName, email, age}, handleSubmit, onSubmit, errors} = this.props;
+				// <form onSubmit={this.props.handleSubmit(this.handleSubmit)}>
+
+				// <form onSubmit={handleSubmit}>
 		return (
 			<div>
 				<p>{notes}</p>
-				<form onSubmit={this.props.handleSubmit(this.handleSubmit)}>
+				<form onSubmit={handleSubmit(this.handleSubmit)}>
 					<label>First Name</label>
 					<div>
 						<input type="text" placeholder="First Name" isRequired {...firstName}/>
@@ -139,6 +143,7 @@ const required = true;
 const validationRules = {
 	firstName: {required},
 	email: {
+		required,
 		validator: emailValidator(),
 		// validator: emailValidator('Enter your email')
 	}

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <!-- 
 NOTES: 
-  Uses 'Field' component to render specified component.
-
   multiple components
   no refs
   uses Redux instead of internal state
@@ -27,8 +25,10 @@ NOTES:
     <script src="lib/react-redux-4.4.5.min.js"></script>
     <script src="lib/react-dom-0.14.0.js"></script>
 
-    <!-- // <script src="lib/redux-form-6.0.2.js"></script> -->
-    <script src="lib/redux-form-6.0.2_broken.js"></script>
+    <!-- Ver: 6.0.2 - this.props.fields contains the array specified in ReduxForm - something not working properly!!! -->
+    <!-- http://stackoverflow.com/questions/39312288/fields-not-being-passed-correctly-to-props-using-reduxform -->
+    <!-- <script src="lib/redux-form-6.0.2.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/redux-form/5.2.3/redux-form.js"></script>
 
     <script src="lib/babel-core-5.8.34.min.js"></script>
 
@@ -48,6 +48,7 @@ NOTES:
   <body>
     <div id="app">Loading...</div>
 
-    <script type="text/babel" src="form-01.js"> </script>
+    <script type="text/babel" src="syncValidationForm.js"> </script>
+    <script type="text/javascript">console.log('start[syncValidationForm]');</script>
   </body>
 </html>

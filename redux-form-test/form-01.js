@@ -6,6 +6,9 @@ const {reducer: formReducer, reduxForm, Field} = ReduxForm;
 /*
 NOTES: getting started - redux store
 
+<Field> component is present with ReduxForm version 6.0.2 - but other things don't work as expected.
+redux-form-6.0.2_broken
+
 	getting started.
 	Submit and clear buttons disabled until values entered.
 
