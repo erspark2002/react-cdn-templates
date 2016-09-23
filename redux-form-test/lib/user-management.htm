@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://localhost:8080/user-management -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}</style><style type="text/css">.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,0.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:"";padding:1px 1px 1px 0;height:16px;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:right;background-repeat:no-repeat;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#999}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);background-size:34px}.hdpi .pac-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)}.pac-icon-search{background-position:-1px -1px}.pac-item-selected .pac-icon-search{background-position:-18px -1px}.pac-icon-marker{background-position:-1px -161px}.pac-item-selected .pac-icon-marker{background-position:-18px -161px}.pac-placeholder{color:gray}</style><style type="text/css">.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}</style><link type="text/css" rel="stylesheet" href="./user-management_files/css"><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400;text-decoration:none}.gm-style img{max-width:none}</style><title></title><style type="text/css">.ToastNotifications___3DjMY {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  padding: 8px 10px; }
+
+.Toast___3XFIS {
+  background-color: #0f930a;
+  min-height: 75px;
+  font-weight: 300;
+  padding: 8px 10px;
+  color: #fff; }
+  .Toast___3XFIS:not(:first-child) {
+    margin-top: 8px; }
+
+.Toast__enter___1gRBc {
+  transform: translateX(110%); }
+
+.Toast__enter___1gRBc.Toast__enter_active___3BtQU {
+  transform: translateX(0%);
+  transition: transform 0.4s cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+.Toast__leave___16CBW {
+  transform: translateX(0%);
+  opacity: 1; }
+
+.Toast__leave___16CBW.Toast__leave_active___3TnkH {
+  transform: translateX(110%);
+  transition: transform 0.7s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  opacity: .2; }
+</style><style type="text/css">@charset "UTF-8";
+.NavBar___3bCKO {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  padding: 10px 40px;
+  height: 80px; }
+
+.NavBar_LinkGroup___M5FfS {
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: 700; }
+  .NavBar_LinkGroup___M5FfS li {
+    display: inline-block;
+    padding: 8px 30px; }
+    .NavBar_LinkGroup___M5FfS li:not(:last-child) {
+      border-right: 1px solid #fff; }
+      .NavBar_LinkGroup___M5FfS li:not(:last-child):after {
+        border-right: none; }
+    .NavBar_LinkGroup___M5FfS li:hover {
+      opacity: 0.8; }
+  .NavBar_LinkGroup___M5FfS a {
+    text-decoration: none;
+    color: #fff; }
+
+.NavBar_LinkGroup_DropDown___WaICN {
+  position: relative; }
+  .NavBar_LinkGroup_DropDown___WaICN::after {
+    content: "\25BC";
+    position: absolute;
+    right: 18px;
+    top: 11px;
+    color: #fff;
+    font-size: 9px; }
+  .NavBar_LinkGroup_DropDown___WaICN:hover {
+    opacity: 1.0 !important; }
+    .NavBar_LinkGroup_DropDown___WaICN:hover .NavBar_LinkGroup_DropDown_Menu___3UPOt {
+      display: block; }
+
+.NavBar_LinkGroup_DropDown_Menu___3UPOt {
+  display: none;
+  position: absolute;
+  top: 34px;
+  left: -58px;
+  width: 200px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px #666;
+  z-index: 3; }
+  .NavBar_LinkGroup_DropDown_Menu___3UPOt::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    right: 22px;
+    border-width: 0 13px 13px;
+    border-style: solid;
+    border-color: #fff transparent;
+    display: block;
+    width: 0; }
+  .NavBar_LinkGroup_DropDown_Menu___3UPOt li {
+    padding: 5px;
+    display: block;
+    line-height: 40px; }
+    .NavBar_LinkGroup_DropDown_Menu___3UPOt li:not(:last-child) {
+      border-bottom: 1px dotted #333; }
+      .NavBar_LinkGroup_DropDown_Menu___3UPOt li:not(:last-child):after {
+        border-bottom: none; }
+  .NavBar_LinkGroup_DropDown_Menu___3UPOt a {
+    text-decoration: none;
+    color: #333; }
+
+.NavBar_LinkGroup_Link__active___2MbpU {
+  color: #ffb135 !important; }
+
+.NavBar_Logo___2KMtS {
+  background: url(/assets/329363eeacb01f25bc2a53ef768a286b.png);
+  background-repeat: no-repeat;
+  width: 167px;
+  height: 95px; }
+</style><style type="text/css">body {
+  background-color: #f2f2f2;
+  margin: 0;
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif; }
+
+.react-datepicker__tether-element-attached-top .react-datepicker__triangle, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow {
+  margin-left: -8px;
+  position: absolute; }
+
+.react-datepicker__tether-element-attached-top .react-datepicker__triangle, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__tether-element-attached-top .react-datepicker__triangle::before, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle::before, .react-datepicker__year-read-view--down-arrow::before {
+  box-sizing: content-box;
+  position: absolute;
+  border: 8px solid transparent;
+  height: 0;
+  width: 1px; }
+
+.react-datepicker__tether-element-attached-top .react-datepicker__triangle::before, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle::before, .react-datepicker__year-read-view--down-arrow::before {
+  content: "";
+  z-index: -1;
+  border-width: 8px;
+  left: -8px;
+  border-bottom-color: #aeaeae; }
+
+.react-datepicker__tether-element-attached-top .react-datepicker__triangle {
+  top: 0;
+  margin-top: -8px; }
+
+.react-datepicker__tether-element-attached-top .react-datepicker__triangle, .react-datepicker__tether-element-attached-top .react-datepicker__triangle::before {
+  border-top: none;
+  border-bottom-color: #f0f0f0; }
+
+.react-datepicker__tether-element-attached-top .react-datepicker__triangle::before {
+  top: -1px;
+  border-bottom-color: #aeaeae; }
+
+.react-datepicker__tether-element-attached-bottom .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow {
+  bottom: 0;
+  margin-bottom: -8px; }
+
+.react-datepicker__tether-element-attached-bottom .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle::before, .react-datepicker__year-read-view--down-arrow::before {
+  border-bottom: none;
+  border-top-color: #fff; }
+
+.react-datepicker__tether-element-attached-bottom .react-datepicker__triangle::before, .react-datepicker__year-read-view--down-arrow::before {
+  bottom: -1px;
+  border-top-color: #aeaeae; }
+
+.react-datepicker {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #aeaeae;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative; }
+
+.react-datepicker__triangle {
+  position: absolute;
+  left: 50px; }
+
+.react-datepicker__tether-element-attached-bottom.react-datepicker__tether-element {
+  margin-top: -20px; }
+
+.react-datepicker__header {
+  text-align: center;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #aeaeae;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding-top: 8px;
+  position: relative; }
+
+.react-datepicker__current-month {
+  margin-top: 0;
+  color: #000;
+  font-weight: bold;
+  font-size: 13px; }
+
+.react-datepicker__current-month--hasYearDropdown {
+  margin-bottom: 16px; }
+
+.react-datepicker__navigation {
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  width: 0;
+  border: 6px solid transparent; }
+
+.react-datepicker__navigation--previous {
+  left: 10px;
+  border-right-color: #ccc; }
+
+.react-datepicker__navigation--previous:hover {
+  border-right-color: #b3b3b3; }
+
+.react-datepicker__navigation--next {
+  right: 10px;
+  border-left-color: #ccc; }
+
+.react-datepicker__navigation--next:hover {
+  border-left-color: #b3b3b3; }
+
+.react-datepicker__navigation--years {
+  position: relative;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.react-datepicker__navigation--years-previous {
+  top: 4px;
+  border-top-color: #ccc; }
+
+.react-datepicker__navigation--years-previous:hover {
+  border-top-color: #b3b3b3; }
+
+.react-datepicker__navigation--years-upcoming {
+  top: -4px;
+  border-bottom-color: #ccc; }
+
+.react-datepicker__navigation--years-upcoming:hover {
+  border-bottom-color: #b3b3b3; }
+
+.react-datepicker__month {
+  margin: 5px;
+  text-align: center; }
+
+.react-datepicker__day-name,
+.react-datepicker__day {
+  color: #000;
+  display: inline-block;
+  width: 24px;
+  line-height: 24px;
+  text-align: center;
+  margin: 2px; }
+
+.react-datepicker__day {
+  cursor: pointer; }
+
+.react-datepicker__day:hover {
+  border-radius: 4px;
+  background-color: #f0f0f0; }
+
+.react-datepicker__day--today {
+  font-weight: bold; }
+
+.react-datepicker__day--selected, .react-datepicker__day--in-range {
+  border-radius: 4px;
+  background-color: #216ba5;
+  color: #fff; }
+
+.react-datepicker__day--selected:hover, .react-datepicker__day--in-range:hover {
+  background-color: #1d5d90; }
+
+.react-datepicker__day--disabled {
+  cursor: default;
+  color: #ccc; }
+
+.react-datepicker__day--disabled:hover {
+  background-color: transparent; }
+
+.react-datepicker__input-container {
+  position: relative;
+  display: inline-block; }
+
+.react-datepicker__year-read-view {
+  width: 50%;
+  left: 25%;
+  position: absolute;
+  bottom: 25px;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+
+.react-datepicker__year-read-view:hover {
+  cursor: pointer; }
+
+.react-datepicker__year-read-view:hover .react-datepicker__year-read-view--down-arrow {
+  border-top-color: #b3b3b3; }
+
+.react-datepicker__year-read-view--down-arrow {
+  border-top-color: #ccc;
+  margin-bottom: 3px;
+  left: 5px;
+  top: 9px;
+  position: relative;
+  border-width: 6px; }
+
+.react-datepicker__year-read-view--selected-year {
+  right: 6px;
+  position: relative; }
+
+.react-datepicker__year-dropdown {
+  background-color: #f0f0f0;
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  top: 30px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #aeaeae; }
+
+.react-datepicker__year-dropdown:hover {
+  cursor: pointer; }
+
+.react-datepicker__year-option {
+  line-height: 20px;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.react-datepicker__year-option:first-of-type {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+
+.react-datepicker__year-option:last-of-type {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+
+.react-datepicker__year-option:hover {
+  background-color: #ccc; }
+
+.react-datepicker__year-option:hover .react-datepicker__navigation--years-upcoming {
+  border-bottom-color: #b3b3b3; }
+
+.react-datepicker__year-option:hover .react-datepicker__navigation--years-previous {
+  border-top-color: #b3b3b3; }
+
+.react-datepicker__year-option--selected {
+  position: absolute;
+  left: 30px; }
+
+.react-datepicker__close-icon {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  height: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: middle; }
+
+.react-datepicker__close-icon::after {
+  background-color: #216ba5;
+  border-radius: 50%;
+  bottom: 0;
+  box-sizing: border-box;
+  color: #fff;
+  content: "\D7";
+  cursor: pointer;
+  font-size: 12px;
+  height: 16px;
+  width: 16px;
+  line-height: 1;
+  margin: -8px auto 0;
+  padding: 2px;
+  position: absolute;
+  right: 7px;
+  text-align: center;
+  top: 50%; }
+
+.react-datepicker__today-button {
+  background: #f0f0f0;
+  border-top: 1px solid #aeaeae;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 0; }
+
+.react-datepicker__tether-element {
+  z-index: 2147483647; }
+</style><style type="text/css">.Container___3qvDC {
+  padding: 20px 16px; }
+</style><style type="text/css">.ColumnGroup___1n9_J {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.ColumnGroup_Column___3P9TJ {
+  flex: 1;
+  padding-left: 20px; }
+  .ColumnGroup_Column___3P9TJ:first-child {
+    padding-left: 0; }
+</style><style type="text/css">.Table___2QLJL {
+  width: 100%;
+  border-collapse: collapse; }
+  .Table___2QLJL thead {
+    text-align: left; }
+  .Table___2QLJL td, .Table___2QLJL th {
+    padding: 10px; }
+
+.Table__tiger___Dtaf7 thead tr {
+  background-color: #000;
+  color: #fff; }
+
+.Table__tiger___Dtaf7 tr {
+  background-color: #fff; }
+
+.Table__tiger___Dtaf7 tr:nth-child(even) {
+  background-color: #efefef; }
+</style><style type="text/css">.CrewList___22llc {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; }
+  .CrewList___22llc > div {
+    max-width: 33%;
+    display: flex;
+    align-items: center;
+    padding-right: 15px; }
+    .CrewList___22llc > div span {
+      margin-left: 5px; }
+
+.CrewList_Count___3Umwv {
+  display: flex;
+  color: white;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #75b7e4;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  position: relative; }
+
+.CrewList_Count___3Umwv:hover {
+  background-color: #2889cb; }
+  .CrewList_Count___3Umwv:hover .CrewList_Count_Dropdown___Lnldu {
+    display: block; }
+
+.CrewList_Count_Dropdown___Lnldu {
+  display: none;
+  position: absolute;
+  top: 26px;
+  left: -200px;
+  width: 200px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px #666;
+  z-index: 1;
+  color: #333; }
+</style><style type="text/css">.Icon___2HKDE {
+  display: inline-block;
+  height: 17px; }
+  .Icon___2HKDE img {
+    height: 100%;
+    width: auto; }
+</style><style type="text/css">.CloseButton___1FBvl {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: 20px;
+  font-weight: 200;
+  vertical-align: middle; }
+  .CloseButton___1FBvl:hover {
+    cursor: pointer;
+    color: #c8c8c8; }
+</style><style type="text/css">.Overlay___Gk61i {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 25;
+  display: none; }
+
+.Overlay__visible___Yjsfk {
+  display: block; }
+
+.Dialog___2KxsN {
+  max-width: 450px;
+  margin: 0 auto;
+  margin-top: 15%; }
+
+.Dialog_Head___2Cx3u {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 16px; }
+  .Dialog_Head___2Cx3u button {
+    background-color: transparent;
+    border: 0;
+    color: inherit;
+    font-size: 35px;
+    font-weight: 200;
+    vertical-align: middle; }
+    .Dialog_Head___2Cx3u button:hover {
+      cursor: pointer;
+      color: #c8c8c8; }
+
+.Dialog_Body___1NTjI {
+  background-color: #fff; }
+
+.Dialog_Footer___4Dhfj {
+  display: flex; }
+  .Dialog_Footer___4Dhfj > * {
+    flex: 1; }
+</style><style type="text/css">.FlatButton___smA9j {
+  border: 0;
+  border-radius: 0;
+  padding: 8px 16px;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  background-color: transparent; }
+  .FlatButton___smA9j:hover {
+    cursor: pointer; }
+</style><style type="text/css">.Button__disabled___37UgC {
+  background-color: #e4e4e4; }
+  .Button__disabled___37UgC:hover {
+    background-color: #989898; }
+
+.Button__primary___3lEUj {
+  background-color: #ffb135; }
+  .Button__primary___3lEUj:hover {
+    background-color: #9b5f00; }
+
+.Button__secondary___3GXVp {
+  background-color: #78b9e4; }
+  .Button__secondary___3GXVp:hover {
+    background-color: #216fa3; }
+
+.Button__round___1Ikoq {
+  border-radius: 15px;
+  width: auto; }
+</style><style type="text/css">.TableContainer___1VsEh {
+  display: flex; }
+  .TableContainer___1VsEh > a {
+    margin-top: 1em; }
+  .TableContainer___1VsEh > * {
+    padding-right: 20px; }
+  .TableContainer___1VsEh > *:last-child {
+    padding-right: 0; }
+
+.Table___1VjDn td:first-child {
+  padding: 0; }
+
+.Options___1fzSO {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none; }
+  .Options___1fzSO a {
+    color: #333;
+    text-decoration: none; }
+  .Options___1fzSO a:hover {
+    color: #666666; }
+
+.Options_Item___1HLm- {
+  margin: 0 25px;
+  position: relative; }
+
+.Options_Item_DatePicker___2dDSH {
+  position: absolute;
+  width: 250px;
+  right: -45px;
+  top: 20px;
+  z-index: 1; }
+
+.DateNav___1Ilf2 {
+  display: flex;
+  align-items: center; }
+
+.DateNav_Arrow___3sUbA {
+  height: 32px;
+  width: 32px;
+  background-color: #333;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; }
+
+.DateNav_Arrow___3sUbA:hover {
+  background-color: #666666; }
+</style><style type="text/css">.Card___3GHvW {
+  padding: 20px 16px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.Card__thin___1B2im {
+  padding: 8px 10px; }
+</style><style type="text/css">.Input___2RIGH {
+  font-weight: 600;
+  padding: 7px;
+  color: #000;
+  font-size: .8em;
+  border: 1px solid #d3d3d3;
+  width: 100%;
+  box-sizing: border-box; }
+  .Input___2RIGH:disabled {
+    background-color: #e4e4e4; }
+
+.ErrorsContainer___2TReG {
+  margin-top: 5px; }
+
+.ErrorMessage___2YZSP {
+  color: #a3050f;
+  font-size: 13px;
+  font-weight: 600; }
+</style><style type="text/css">.InputGroup___2R5OT:not(.InputGroup__horizontal___15tCe) ~ .InputGroup___2R5OT {
+  margin-top: 20px; }
+
+.InputGroup__horizontal___15tCe {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; }
+  .InputGroup__horizontal___15tCe > * {
+    flex: 1; }
+    .InputGroup__horizontal___15tCe > *:not(:first-child) {
+      margin-left: 16px; }
+  .InputGroup__horizontal___15tCe ~ .InputGroup__horizontal___15tCe {
+    margin-top: 30px; }
+</style><style type="text/css">.InputLabel___HKy_J {
+  font-size: 15px;
+  margin: 10px 0 5px;
+  display: block; }
+</style><style type="text/css">.InputStatus___2txAy {
+  position: absolute;
+  display: flex;
+  width: 20px;
+  top: 0;
+  bottom: 0;
+  right: 0px;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px; }
+  .InputStatus__invalid___R1WHV .InputStatus_Icon___1Qki3 {
+    background-color: #900610; }
+  .InputStatus__invalid___R1WHV .InputStatus_Message___sqJzS {
+    color: #900610; }
+  .InputStatus__valid___fVBT0 .InputStatus_Icon___1Qki3 {
+    background-color: #156f02; }
+  .InputStatus__valid___fVBT0 .InputStatus_Message___sqJzS {
+    color: #156f02; }
+
+.InputStatus__visible___T-kje .InputStatus_Message___sqJzS {
+  display: flex; }
+
+.InputStatus_Icon___1Qki3 {
+  position: absolute;
+  display: flex;
+  color: #fff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1.5em;
+  /* Align center support for older browsers */
+  text-align: center;
+  align-items: center;
+  justify-content: center; }
+  .InputStatus_Icon___1Qki3:hover {
+    cursor: pointer; }
+
+.InputStatus_Message___sqJzS {
+  position: absolute;
+  display: none;
+  top: calc(100% + 10px + 5px);
+  right: -8px;
+  width: 200px;
+  z-index: 1; }
+  .InputStatus_Message___sqJzS::after {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    /* margin-left: -0.5em; */
+    top: 0px;
+    right: calc(-0.75em + (8px / 2));
+    box-sizing: border-box;
+    border: 8px solid black;
+    border-color: transparent transparent #fff #fff;
+    transform-origin: 0 0;
+    transform: rotate(135deg);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.12), -2px 1px 0px rgba(0, 0, 0, 0.12); }
+  .InputStatus_Message___sqJzS ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+    color: inherit; }
+</style><style type="text/css">.Icon__valid___3zEVR {
+  background-color: #156f02; }
+
+.Icon__invalid___2Ojos {
+  background-color: #900610; }
+
+.Icon__required___3jVTt {
+  background-color: #d2892d; }
+</style><style type="text/css">.ValidatedInput___3HadW {
+  position: relative; }
+
+.Input___Xa6B5 {
+  padding-right: 30px; }
+</style><style type="text/css">.FormValidation___24g9y input:invalid {
+  background-color: #ffdddd; }
+
+.FormValidation___24g9y form:invalid {
+  border: 1px solid #ffdddd; }
+
+.FormValidation___24g9y input:valid {
+  background-color: #ddffdd; }
+
+.FormValidation___24g9y form:valid {
+  border: 1px solid #ddffdd; }
+
+.FormValidation___24g9y input:required {
+  border-color: #800000;
+  border-width: 1px; }
+
+.FormValidation___24g9y input:required:valid {
+  border-color: #008000; }
+
+.FormValidation__SubmitButton___3TEHo {
+  text-align: right;
+  padding: 5px; }
+</style><style type="text/css">.MarkerContainer___2Mjlg {
+  position: relative; }
+
+.MarkerContainer_Marker___3bniy, .MarkerContainer_Marker__active___TKXt7, .MarkerContainer_Marker__inactive___1P3pl, .MarkerContainer_Marker__rollover___2gfM3, .MarkerContainer_Marker__address___3Kx9Q {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -50px;
+  left: -25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer; }
+
+.MarkerContainer_Marker___3bniy:hover, .MarkerContainer_Marker__active___TKXt7:hover, .MarkerContainer_Marker__inactive___1P3pl:hover, .MarkerContainer_Marker__rollover___2gfM3:hover, .MarkerContainer_Marker__address___3Kx9Q:hover {
+  opacity: 0.8; }
+
+.MarkerContainer_Marker__active___TKXt7 {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAABPVJREFUaAXdWUFsW0UQnXXsAMqhEQiQSlUcpPYCSOFWRBOlHKFSf8ShlyLMkaQIS1y4ETj1guoKYhAHmogLSEj+iIqrkwYOPZFIICSQqINoJVIVpRIptLU9nfn2t77t9c7+/ZtLV3J2d3Z2Zt6f2dn5PwAPSFM+cQT18qQq3DuFiAGAmgTEolKqyDoQYI17GmzCGK6GL1U3o7mnP16ABBtn5wDa5xWoaVu7CGwDFKxAc/xCeKKya7tvFF8mIB0A+D4JISBuDRF2VQ7KtePLq24SOrucgQSXF0oUNhezKE/ujUKvWZh39U4uKcx2TCAu+gTBeiOv5u/Wgx8XrMMzaW9qj3RBlJJCfI451KBVmErrmVQe6YbTvoHgB6IUTAJ5Ju3DsQbCLvcdTqOM5ewXbCxURq3r6NahFWws1qM41kkZoJ08eAKePXAEpiaegicefgz2mv/B1b2/oEG/+t9XovHAFu0U862p8MXPGtrFAaIVEE6zClB099TEITh79AwBODSgpn/69Z/fA/+khoBhOFOdl/h43Sq0FLbLkrCXnzwGH73wngiC5Zw+/Ap8+Pw7MJF/xCiWQiywzWIiEC476ASeMmmMPHHkjIllaO05Cr3Th18dog8RUM0N0TQEEQiM3Q00+/pIbx99vW9uOzl5cA4YkLEhvmFc7y6KQOgQGYHwwS7SoXZtbz7zmnFrlME4KoQmAqEr1yiEs1KWJiWGSHa+OS3pEIHQTfu0SQin2KxNDC8LBSKQ+H1ilCy+L7K2opCuQWF2j0hG3rjzj8QirvNFaWxt3DWu06LoEXqlWzcJufqvYIRpc3dtR3oYKteQxIhAEJVRCJceWdptKl92/r9pFtHMb5oZ7DyyZhJS37kCbIxr++66WPls2ZT0okegNR6ajOSn+ZVF3aST0di7JtZcyO/1Fk0EEj0NxG9Nsi7RU/3l1u8mFu3ax799qaX3EcdaxgcZ84pAmJGq0JV4w6j+3K+fw6Xra6OW++jsiXd/OmdRzuO61zKerZjfWGxQZ7wcmY8vN669Hn/oUZ4ONQb7xR/fDNF1BMT2fDj7qZVHrN5HWEnww2JZIZzXKdTRuETn8oMvuxt3btLTvyZnp35B27WZ5WI/afQsP3ppYOVeYYUq4SUq6Q8MrGin/Fb4M50b/rk0+oC3lGaf1RlhgXzoKYNU0gjPwLsdzlZX0uy3BhIJbY5X6HvurTQKXHjTeoN1WJ+R2CDfXxhjuYk+1dmI96XzCO3qunw7FuC7R1AlF5mpgbASSotlF2XyHro3Zj5Zk/mGOZyAdHK7uSoeViVTMN8uyVx6DicgLCqLUp0pVD1csL3FdfudgbBSUv6BTqgDbZv+4bPksK+3xRlIJIHTMUDmg89nzqZU71mtGWQCEl2SjlmmZwtV1rb1VG+PZpAJCMvjLENfWlY1smUSXa5Y8JMBMwOJrG0Vyi43PubUUpYDnnxSKjnJMg4uvxUolavZy8D12kx1zp7fzOnHI6QjinPhTbJnCodUhjujJycx8AaEZWJrvESdmMUQoOwrpFgvN2+h1RFHL2DSP4XIa7XZahDz++q9eoSNirIY3dJaAzmkOl7TLmchegcSGdO5pbcGDUOVC7JefIMy4/m+AIkuyhyWkik5qqUcK9vYWFPv/YwklSU+WGzRh4Tp5Jrv8b54JDYyPL5c4Vuf/s3s/XDHOh64/j6EZqxnvuNZ+QAAAABJRU5ErkJggg==); }
+
+.MarkerContainer_Marker__inactive___1P3pl {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAABNhJREFUaAXdWb1PG0sQP/MARTTxkyheBUSiMBJf/wCSO+hCqCJAepcCaqegDq+miGlpYiRAVHxUgSqAaJEMFFACVSQooEGIz/f7WV7rdPbNzd6em6x02r2d2Zn57czOjs+e94e0TNo4fN/PPj09fcxkMuOQnX17e+vBuKeqZ4895sp4ltfW1srVeecuNSDT09N5GPcdRg9rrQL/BfhLra2ti6VS6Va7rhGfMxACgOBveNgnbbcAVVhdXV1OKsAJyOTkpN/S0vIjqfIG6/bgnU9JvNPSQJhqampq6kfKIKg3j/P1CxukDk9jbCKPEARi2zdCmtDfwjMfbDxj7RGGU5NBcF+Y+X7ZbNBfNsx0OcLpp82apLzYrH8GBwf/Pjk52dHIsAotZCjuUl4jeGxszMvlcl53d7fX2dnp3d/fe5eXl5Xn8PCw0mvkPD8/f1hfX7+I41UDqabZWHfT8JmZmQoASfnGxoa3ubkpsRja1srKyifzEtWrQ2tgYKAId+eiBHF+ZGTEm5ub87LZrMRWofX19Xl8jo6OPJwHiT/X39+/fXp6+ltiUh12lh0A8VESRE/Mzs5KLHU0ApmYmKibD09Adz48F35XAXl8fBwPLwy/24Iw60dHRyueMe8R/b8R87VpFRDsiAiEB7urq6sm1HaAe0lcAv3DjAqJSQtEFMKs5NIYlnEN2WtY4lEBQUEnatIYIhlBGs+LS1MBgWt7JCW8L1xb3GZgM909Emfkzc1NHEssnZel1ADkVqKrPAIB+5KQq6sriayiXV9fi3wojS4kBhUQ7IYoJG43JQNIY/kS51VUw2VJjhbIniTk4OCgYozEI9F2d3clMmnHcSW9Ckh7e/uWpIm7qayb6sQwLFl3SQ0RUZLopKmAcDcgbFsStrOz452fn0ssDWlLS0sN54OTLy8v4kaSV100Dg0NPYD/c1BBeMwCEN7zent7w6S6d3piYWFBU87v47NRsU5AaEINBD9wzlEBf8Gdkg3JqL2yigVfxTO84Do6Omq04IBnolgsend3d8HpqPFX6o4imnn17xEuQE1UAJDvZnFcTyC86PgwvTK7xWWnoEyE8yU+EfUE56LGrVGERvNtbW0l7Po8wLxvRA/PMa2enZ1VnjBN8w4g8xo+8qhDi8zlcvkBZ+Udhnm+N7PRGzgbvlaHKmsFheFiKkKJKriD62zHNt6gbCuPcAG9gkP/G+E1zvdmNFtv0AZrj3ARXF6iMo6b0bBJvq3cRECoBMoKtsqU/Pv4arKn5K2xJQYCZVuQIlbFNS0WA/wS9C3Ya6yJgVBCUqU17fWDRc3HuPplCc+IEVRV+p95d+l55pAR55PKcPIIlVbTsfPB55mLK9UlkBmJqKVpP6dGyYM3tlGKOKVzZ4/QOGYZGLMcZag0j3V3KNOdM2AqQGgo6rACjZKMjqDNJz3gQXmphJYRiBBjeKg+sVfX8M7Im/UufWoeoRG8WxjvGoPovTTTd6pACAAh5sPI2CwGnkIaIWU2LdXQMkLjshi95pqljC7Tp+4RCmYWQ7fIcbgxpOi18Lzre1OA0KjqLX0cNpDlv8vFF5Zn3psGhMa+vr7yvART8mLVW0Z/ar31DysbzfzfD38xP8ALY1h3DBBOt7eku2keMUpxqPnTeBmptmkgjK4/ov8f9PTYF/C7BLAAAAAASUVORK5CYII=); }
+
+.MarkerContainer_Marker__rollover___2gfM3 {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAABOBJREFUaAXtWU9vU0cQn/WzhRSnJZGgEpUBcyvtJV8AKTekcsCRkksb1NdDOdBLTkhIlUilntoDyaGXXuoIg5Ac1HAAiRNBfIH00D9Hh/oUUAltbAm9Fy8zz37Vc7ye2ffeuoeqK9n73s7szPx2dmdmbYD/SFMucbzyazOdwLusVaGmQM+AUlWUTx8ArbejXsEOHKqNyt3mTvTu6MsJkD+WF+cVqFugYC6FXS2ldX2qGK7P1rf2U8wzsuYC0gcAN3Hl543SLQY16H3V0yuVO/c3LNjHsmQG0r6y5KPUH8dKTkvArVcuhgtZvZMJCIIgAH5aW0V+jeenB59nOT+pgUwMxAAlbbVpLzyX1jMFcZUSDIPt5CeGnD9i0JjphKUnaQVbA2l/skQRyd2Z4CzF6NdeXlrjWI7SrLdWe3nxiW10mr54CY598CGUzlbBO3ESet0OBLstCJ63oPvsadQfNcT07gXBuVP3tlom2tExKyBRmFVKdHfpTBVmr14D6rn2109N+Bs/UtMatk43mgsSH9HttpaCFUnY1IV5eO+bb0UQJOfdhSU4ceMmFKbKrFiloDbY0iwfEUUgVHbgAbzMSYo88cU1jmWEduz8R/AOAhKbp+dFHmQQgXQOSzVJ0OzVLyUWI3364sdAgNim1WcsfUAUgWBcZ4HQwS6dOWujy8hz/FPBToxgtCuMkxODIhDAuJ7gH3mkqJSnSYGBZB+ExTlJhwgEwxq73BRi8zZxe1koEIGgjConh/JF3iZ5BaNXfo9IRh6+fCGxiHRKlHxT+zzdImppgKecENkIbnafFr7YY5m01i2WAYni1sJbHCuESo88rdftguTV6WK4I+kQgWB9tc0J6Tzbxlqqy7GwtM7jhywdNPxsU9KLQMpesMVpotW0qZtMMoLnu0B1F9uUrrP0AVEEQquBSfEBJ+wAV/XN779yLEbaqx++N44nB70gZBcy5hWBEKOHv3bEE8b1f659BwePH40jD42TJ/a+ui6W8xRonJbxZAXeR1p4XtjkSHyU3GaxgByX8Qns6zt1YhVbQfcW3m/ct/KI1X2ENLavLK5guXJL1D5goBKdsj4lu/DlXnSxkqLTkGytdyuNzerQGPNSZGhDpLIX1g/C0ipm2eNDhDEvdCt889sv0WcMCz+s1CrPMEy1OiM0pR8C9drw9Am9kTduN+tppFsDIaGYmNbw+vk6jYJMvCm9QTpSASGv4NbCszLBlsEbZE0qIDQhcjkqo+dJNAy5fha5qYGQkgLoiXiF8sbpxub2vwaEYjspzaKQm1MMAp+jc7RMHiGBeZQaDdKwbpvFTfMzAyGleE/42iQ09RieuXIxWE09LzEhMxCSQeEY/1LLffDpzNmU6gm7Rx5zAelXxtmiTGwJVda29VQ8x9TnAkICoyij9YZJuDRGybUYhE4iYG4gZCz+ZbaSJeMrpVfzHPDkQjkBQlvMg56fFCw9U/iu3N50Vrs5AUJG93MLf5OMwfW3VPacEctJ9s6AkFD878+3iWJUr7naUjEYp0BsohhFqbQlemws1zsFQor6UQzWTUppS0VeMxFzjjkHQvZEWRp/jxq1TdfyJr5Rmf2RiQCJjO2BPxSSsZbKWtmOMz45rpIvrp//+cECvVNpNOdcy0/Km4hHYgVRnsCs74VBLR77vxdW4C1nOqsKM2GqUAAAAABJRU5ErkJggg==); }
+
+.MarkerContainer_Marker__address___3Kx9Q {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAABNZJREFUaAXVWs1vG0UUf2+cOI7UoqhckKiKaU6UA+bEqaoj6BE1/AXYDQc4gMKFHilHuDQtBy5t7P4BiOQMqK7KgXKpOfAhoRRTgciFqnxI+Wh2Hu9tvJa9mZ2Z3R0jMZK1M2/e+8377XvzsbtGCFz21usXiFQTEBtD6ObhlQYAOACCRwphI8Lo9nx7wLIwBUPA7HTqdaXV+4SwzM4u+GNSXwGuVS9u3fS3MWuWIkKd+sK+VlcIsWWG95VSn1C/yxHq+Vqk9QoT4Sg0kdRn+SKQHn6yjUTduZX77UmpX6sQkZ0biy1E6PgNkVeL+nOol7A9eJTHUuVRFt3dG6dXp0dCRsDGHqlbkrbS8i25iOxdX1zm1eiKL3hxPSFT4bT1L95E9jv1BimaUjoZHW7urp9eM/YYhN5zZHd98RbbNw0YRpF66iXAE88d/o6fBP37XaCH3/PvR6B/fjXamISE0bM++82MyTgtkxWKN7JmWm5qC4GZsx8CHjs50S3ypETfdeCg/zHA/l+JKPOKVJEsWMpUGHZ4RYRDfE8moRWs+gTMNN6GyvNtq1rSKVE5uHMJ9PbdRJR55agsufYY5xyRueEkwS7Mnv3Im4R4LBGbffmTI5EzsqFKyygfEzqJaK2aY/rGqjp1HtSpV4x9VqFEkdPQVRDogkvHSQQQXreCsDOzHs5kYcRz6sV3srqHclyI56lFy03EMTcqz5wHYDJlikTUWRyZYSXis7vKElu2hMCwEtkFsK9UzABPnCnLI7YfX56NgIhNo3wotBKxGSZ9eOzppFruWjY9y40OvEv/VhYits+z25sGtEakBtA3GY3LaPvr8WbhOj38wW5L1LMpWInIMwER/WID0H84HLAZD/v09jdOLUVovalWIjE6Ys82in7wOR8Ey5GRs5erVCuR1Q8nEaVhwzXI4zvvuVQy+/WDL0BuhqNsup4YnUTm3tjacKWXRCTqX3P4crRbFgqfm0DkvplOIsPhu0fdmJQc3LsGB19d4qP535MdGS2JxP7mq+6jPNGfNRU5s8KPiNLdDH8mxNFPn8bOWScvE3385Vv8e9NNQtARuq60OlSbcCW7sbO+2OWHF/sBMmUuuzU+eQawehxkdZMUzLtf+D4hej1YiX/yNpGf1n5O+TrVJgHcnL+41fIZxC+1GEmemwXYBzSYDkaXfbG8icSAOYB9HcjSi6OR4yV3LiL/WVR4pYKcNy0XkVFUZKApFo7Gms8roHEXchMZRmVtHCRoPd43dG783ETE6ZrSa67dvig5Alz12TfS+IWIyEB8Gl1Ng5Vtc0rdnl/Z6hbBKUREBorPYDxwkUGzbCoYFb45hYnEzmDUgmATn65W24N+FkmXvBSRUBNf5ht/3LnsctbW731EsYHwx58+fzd5waZj6/N5t2uzl75SEUnAldKtpF7gusmR7RWwmzAJQkRym9PjgwlknwbPrzmZZwFKkNRK/MibYqjhNVn9Evsy1yARSRzIk2JyKAxFQsYPSsQ3xWSVqpXYM5IbN34NmloJMD9N9hj4XNJOX0OsUmnMoBEZgVs2SlkUQqxSo7GGlalERLCN/44g+ra2cr+RdiJEezoRYc/k8CcTeuQkL7Wk9PKoHbgyNSLiZzyhOQpSl+O5HGmk/r8s8lU4zz8YipL8F+9/soxe8RpVAAAAAElFTkSuQmCC); }
+
+.MarkerContainer_Marker_Info___3wqQp {
+  background: #fff;
+  position: absolute;
+  width: 400px;
+  height: 310px;
+  left: -200px;
+  top: -373px;
+  z-index: 3;
+  box-shadow: 0 0 10px #666; }
+
+.MarkerContainer_Marker_Info___3wqQp::after {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 187px;
+  border-width: 13px 13px 0;
+  border-style: solid;
+  border-color: #fff transparent;
+  display: block;
+  width: 0; }
+
+.MarkerContainer_Marker_Info_Header___2SfwQ, .MarkerContainer_Marker_Info_Header__active___1Fk3j, .MarkerContainer_Marker_Info_Header__inactive___351d2, .MarkerContainer_Marker_Info_Header__rollover___1q8Mr {
+  padding: 15px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px; }
+
+.MarkerContainer_Marker_Info_Header__active___1Fk3j {
+  background: #51c36b; }
+
+.MarkerContainer_Marker_Info_Header__inactive___351d2 {
+  background: #5c5c5c; }
+
+.MarkerContainer_Marker_Info_Header__rollover___1q8Mr {
+  background: #e45d55; }
+
+.MarkerContainer_Marker_Info_Header_Title___nbVKc {
+  font-size: 16px; }
+
+.MarkerContainer_Marker_Info_Close___28iQG {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAQ9JREFUOBGdkuERwiAMhVsn6CgdoaOwiY7gBu0muoH+8b8b2A3qS+XRHIQDzF1MIHlfItp1sG3bRriT/B/z+ilo/cUHUcyFQmUCjSwkevFxlyG5w7VVgyFyWoj8TeiAwzMqFsHoT4C4+20qZByawAZQlhr2LfVHBnzWPZJXAynMgGdVj7+yvSEFjB68IGqbcfgPSLBEQGKwHlK3oQYyz4CLwBMBDfHV9/3a0H+0ZrbkE4Qf71AUMgMo7xu/cT3YEC/cwajdcJf+6SmQaIgWXc/0PLLgGiAHoNfBtaVgVOP3SjYkkBGaPBjFqx4pAygsRQu8a1AY4StcrBrIgdDojR3vOxQm+CVcNCYe7Bplbe1fuk2pLkJVleIAAAAASUVORK5CYII=);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 21px;
+  height: 21px;
+  float: right;
+  cursor: pointer; }
+
+.MarkerContainer_Marker_Info_Close___28iQG:hover {
+  opacity: 0.8; }
+
+.MarkerContainer_Marker_Info_Body___3mg-9 {
+  padding: 0px 15px;
+  font-size: 14px; }
+
+.MarkerContainer_Marker_Info_Body__bold___1lvUN {
+  font-weight: 700;
+  margin: 10px 0; }
+</style><style type="text/css">.Attachment___2KOSJ {
+  text-decoration: none;
+  color: #000;
+  margin: 8px 10px;
+  width: 80px;
+  text-wrap: normal;
+  text-align: center;
+  overflow-wrap: break-word;
+  display: inline-block;
+  position: relative;
+  /**
+   * @todo Clean up, move numbers to variables
+   */ }
+  .Attachment___2KOSJ .Attachment_Icon___JZyFu {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 8px; }
+  .Attachment___2KOSJ .Attachment_Close___1IFgF {
+    position: absolute;
+    top: -.5em;
+    right: -.5em;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    border-radius: 100%;
+    background-color: #b30000;
+    color: #fff; }
+    .Attachment___2KOSJ .Attachment_Close___1IFgF:hover {
+      background-color: #700000; }
+</style><style type="text/css">.AttachmentManager___1cHf2 {
+  border: 2px dashed #000;
+  min-height: 75px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px 10px; }
+
+.AttachmentManager__hover___F3x8m {
+  border: 2px dashed #167618;
+  background-color: #ddffdd; }
+</style><style type="text/css">.Button__control___1xE3y {
+  padding: 0px;
+  font-size: 1.2em; }
+
+.UserPage_Title___1mmHg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.UserPage_Title_AddNewButton___24PkK {
+  text-align: right;
+  padding: 5px; }
+</style><style type="text/css">.Table___S6T6h thead tr {
+  background-color: transparent;
+  color: #000; }
+
+.Table___S6T6h tbody tr {
+  background-color: #f2f2f2; }
+  .Table___S6T6h tbody tr:hover {
+    cursor: pointer;
+    background-color: #b6b6b6; }
+</style><style type="text/css">.THead__control___2yMvc button {
+  padding: 0;
+  text-align: right; }
+
+.TData__control___1vZuo {
+  padding: 0 !important;
+  text-align: center; }
+
+.Button__control___3_lXe {
+  padding: 0px;
+  font-size: 1.2em; }
+</style><style type="text/css">.VehiclePage_VehicleForm___1u37t {
+  line-height: 30px; }
+
+.VehiclePage_Title___MBVhQ {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.VehiclePage_Title_AddNewButton___1rpNT {
+  text-align: right;
+  padding: 5px; }
+</style><style type="text/css">.Columns___3wGaa {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .Columns___3wGaa > * {
+    flex: 1;
+    padding-left: 20px; }
+    .Columns___3wGaa > *:first-child {
+      padding-left: 0; }
+
+.InputGroup___ZgTyj {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .InputGroup___ZgTyj ~ .InputGroup___ZgTyj {
+    margin-top: 20px; }
+  .InputGroup___ZgTyj > *:not(:first-child) {
+    margin-left: 20px; }
+
+.GroupHeading___3qpXe {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: block; }
+</style><style type="text/css">.MapContainer___2iEh3 {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.Maps___1UXW1 {
+  position: relative;
+  height: 100%;
+  width: 100%; }
+</style><style type="text/css">.SearchBox___3liyW {
+  border-radius: 1px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  font-size: 14px;
+  height: 32px;
+  outline: none;
+  width: 300px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 4; }
+</style><style type="text/css">/**
+ * React Select
+ * ============
+ * Created by Jed Watson and Joss Mackison for KeystoneJS, http://www.keystonejs.com/
+ * https://twitter.com/jedwatson https://twitter.com/jossmackison https://twitter.com/keystonejs
+ * MIT License: https://github.com/keystonejs/react-select
+*/
+.Select {
+  position: relative;
+}
+.Select,
+.Select div,
+.Select input,
+.Select span {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.Select.is-disabled > .Select-control {
+  background-color: #f9f9f9;
+}
+.Select.is-disabled > .Select-control:hover {
+  box-shadow: none;
+}
+.Select.is-disabled .Select-arrow-zone {
+  cursor: default;
+  pointer-events: none;
+}
+.Select-control {
+  background-color: #fff;
+  border-color: #d9d9d9 #ccc #b3b3b3;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  color: #333;
+  cursor: default;
+  display: table;
+  height: 36px;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.Select-control:hover {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+.is-searchable.is-open > .Select-control {
+  cursor: text;
+}
+.is-open > .Select-control {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background: #fff;
+  border-color: #b3b3b3 #ccc #d9d9d9;
+}
+.is-open > .Select-control > .Select-arrow {
+  border-color: transparent transparent #999;
+  border-width: 0 5px 5px;
+}
+.is-searchable.is-focused:not(.is-open) > .Select-control {
+  cursor: text;
+}
+.is-focused:not(.is-open) > .Select-control {
+  border-color: #007eff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px rgba(0, 126, 255, 0.1);
+}
+.Select-placeholder,
+.Select--single > .Select-control .Select-value {
+  bottom: 0;
+  color: #aaa;
+  left: 0;
+  line-height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.has-value.Select--single > .Select-control > .Select-value .Select-value-label,
+.has-value.is-pseudo-focused.Select--single > .Select-control > .Select-value .Select-value-label {
+  color: #333;
+}
+.has-value.Select--single > .Select-control > .Select-value a.Select-value-label,
+.has-value.is-pseudo-focused.Select--single > .Select-control > .Select-value a.Select-value-label {
+  cursor: pointer;
+  text-decoration: none;
+}
+.has-value.Select--single > .Select-control > .Select-value a.Select-value-label:hover,
+.has-value.is-pseudo-focused.Select--single > .Select-control > .Select-value a.Select-value-label:hover,
+.has-value.Select--single > .Select-control > .Select-value a.Select-value-label:focus,
+.has-value.is-pseudo-focused.Select--single > .Select-control > .Select-value a.Select-value-label:focus {
+  color: #007eff;
+  outline: none;
+  text-decoration: underline;
+}
+.Select-input {
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.Select-input > input {
+  width: 100%;
+  background: none transparent;
+  border: 0 none;
+  box-shadow: none;
+  cursor: default;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  outline: none;
+  line-height: 14px;
+  /* For IE 8 compatibility */
+  padding: 8px 0 12px;
+  /* For IE 8 compatibility */
+  -webkit-appearance: none;
+}
+.is-focused .Select-input > input {
+  cursor: text;
+}
+.has-value.is-pseudo-focused .Select-input {
+  opacity: 0;
+}
+.Select-control:not(.is-searchable) > .Select-input {
+  outline: none;
+}
+.Select-loading-zone {
+  cursor: pointer;
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 16px;
+}
+.Select-loading {
+  -webkit-animation: Select-animation-spin 400ms infinite linear;
+  -o-animation: Select-animation-spin 400ms infinite linear;
+  animation: Select-animation-spin 400ms infinite linear;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-right-color: #333;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.Select-clear-zone {
+  -webkit-animation: Select-animation-fadeIn 200ms;
+  -o-animation: Select-animation-fadeIn 200ms;
+  animation: Select-animation-fadeIn 200ms;
+  color: #999;
+  cursor: pointer;
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 17px;
+}
+.Select-clear-zone:hover {
+  color: #D0021B;
+}
+.Select-clear {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+}
+.Select--multi .Select-clear-zone {
+  width: 17px;
+}
+.Select-arrow-zone {
+  cursor: pointer;
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 25px;
+  padding-right: 5px;
+}
+.Select-arrow {
+  border-color: #999 transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 2.5px;
+  display: inline-block;
+  height: 0;
+  width: 0;
+}
+.is-open .Select-arrow,
+.Select-arrow-zone:hover > .Select-arrow {
+  border-top-color: #666;
+}
+@-webkit-keyframes Select-animation-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes Select-animation-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.Select-menu-outer {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top-color: #e6e6e6;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  margin-top: -1px;
+  max-height: 200px;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 1;
+  -webkit-overflow-scrolling: touch;
+}
+.Select-menu {
+  max-height: 198px;
+  overflow-y: auto;
+}
+.Select-option {
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #666666;
+  cursor: pointer;
+  display: block;
+  padding: 8px 10px;
+}
+.Select-option:last-child {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.Select-option.is-selected {
+  background-color: #f5faff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.04);
+  color: #333;
+}
+.Select-option.is-focused {
+  background-color: #ebf5ff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.08);
+  color: #333;
+}
+.Select-option.is-disabled {
+  color: #cccccc;
+  cursor: default;
+}
+.Select-noresults {
+  box-sizing: border-box;
+  color: #999999;
+  cursor: default;
+  display: block;
+  padding: 8px 10px;
+}
+.Select--multi .Select-input {
+  vertical-align: middle;
+  margin-left: 10px;
+  padding: 0;
+}
+.Select--multi.has-value .Select-input {
+  margin-left: 5px;
+}
+.Select--multi .Select-value {
+  background-color: #ebf5ff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.08);
+  border-radius: 2px;
+  border: 1px solid rgba(0, 126, 255, 0.24);
+  color: #007eff;
+  display: inline-block;
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-left: 5px;
+  margin-top: 5px;
+  vertical-align: top;
+}
+.Select--multi .Select-value-icon,
+.Select--multi .Select-value-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+.Select--multi .Select-value-label {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  cursor: default;
+  padding: 2px 5px;
+}
+.Select--multi a.Select-value-label {
+  color: #007eff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.Select--multi a.Select-value-label:hover {
+  text-decoration: underline;
+}
+.Select--multi .Select-value-icon {
+  cursor: pointer;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-right: 1px solid #c2e0ff;
+  /* Fallback color for IE 8 */
+  border-right: 1px solid rgba(0, 126, 255, 0.24);
+  padding: 1px 5px 3px;
+}
+.Select--multi .Select-value-icon:hover,
+.Select--multi .Select-value-icon:focus {
+  background-color: #d8eafd;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 113, 230, 0.08);
+  color: #0071e6;
+}
+.Select--multi .Select-value-icon:active {
+  background-color: #c2e0ff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.24);
+}
+.Select--multi.is-disabled .Select-value {
+  background-color: #fcfcfc;
+  border: 1px solid #e3e3e3;
+  color: #333;
+}
+.Select--multi.is-disabled .Select-value-icon {
+  cursor: not-allowed;
+  border-right: 1px solid #e3e3e3;
+}
+.Select--multi.is-disabled .Select-value-icon:hover,
+.Select--multi.is-disabled .Select-value-icon:focus,
+.Select--multi.is-disabled .Select-value-icon:active {
+  background-color: #fcfcfc;
+}
+@keyframes Select-animation-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@-webkit-keyframes Select-animation-spin {
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+</style><style type="text/css">.LoginForm___3kw1I > div {
+  margin: 20px 0; }
+
+.LoginForm___3kw1I input {
+  height: 40px;
+  text-align: center;
+  font-size: 16px; }
+
+.LoginForm_Button___3St0T {
+  height: 40px;
+  font-weight: 700;
+  border-bottom: 4px solid #ce7e00;
+  margin-top: 20px; }
+</style><script async="" src="./user-management_files/js"></script><style type="text/css">.LoginPage___K2YHv {
+  background: url(/assets/c0f04876dbe6c951c16a862f08cf7512.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
+.LoginPage_LoginForm___is_kD {
+  margin: 250px auto 0 auto;
+  width: 350px; }
+
+.LoginPage_LoginForm_Logo___BVjJQ {
+  background: url(/assets/07db38a85848864d1f8b6947e794e5d5.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 334px;
+  height: 190px;
+  margin: 0 auto; }
+
+.LoginPage_LoginForm_ErrorContainer___1cdpv {
+  height: 20px;
+  padding: 10px;
+  color: #ef6161; }
+</style><script type="text/javascript" charset="UTF-8" src="./user-management_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./user-management_files/map.js"></script><script type="text/javascript" charset="UTF-8" src="./user-management_files/overlay.js"></script><script type="text/javascript" charset="UTF-8" src="./user-management_files/util.js"></script><script type="text/javascript" charset="UTF-8" src="./user-management_files/onion.js"></script><script type="text/javascript" charset="UTF-8" src="./user-management_files/controls.js"></script><script type="text/javascript" charset="UTF-8" src="./user-management_files/places_impl.js"></script><script type="text/javascript" charset="UTF-8" src="./user-management_files/stats.js"></script></head><body><div id="entry"><div data-reactroot="" data-reactid="1"><div class="ToastNotifications___3DjMY" data-reactid="2"><span data-reactid="3"></span></div><div class="NavBar___3bCKO" data-reactid="4"><a class="NavBar_Logo___2KMtS" href="http://localhost:8080/" data-reactid="5"></a><ul class="NavBar_LinkGroup___M5FfS" data-reactid="6"><li data-reactid="7"><a href="http://localhost:8080/jobs" data-reactid="8">Job List</a></li><li class="NavBar_LinkGroup_DropDown___WaICN" data-reactid="9"><a href="http://localhost:8080/user-management" data-reactid="10">Management</a><ul class="NavBar_LinkGroup_DropDown_Menu___3UPOt" data-reactid="11"><li data-reactid="12"><a href="http://localhost:8080/user-management" data-reactid="13">User Management</a></li><li data-reactid="14"><a href="http://localhost:8080/vehicle-management" data-reactid="15">Vehicle Management</a></li><li data-reactid="16"><a href="http://localhost:8080/client-management" data-reactid="17">Client Management</a></li></ul></li><li data-reactid="18"><a href="http://localhost:8080/map" data-reactid="19">Map</a></li><li data-reactid="20"><a href="http://localhost:8080/" class="NavBar_LinkGroup_Link__active___2MbpU" data-reactid="21">Forms</a></li><li data-reactid="22"><a href="http://localhost:8080/" class="NavBar_LinkGroup_Link__active___2MbpU" data-reactid="23">Data</a></li><li data-reactid="24"><a href="http://localhost:8080/user-management#" data-reactid="25">Logout</a></li></ul></div><div class="Container___3qvDC"><div class="Overlay___Gk61i"><div class="Dialog___2KxsN"><div class="Dialog_Head___2Cx3u"><div>Merge</div><button class="CloseButton___1FBvl">✕</button></div><div class="Dialog_Body___1NTjI"><div class="Container___3qvDC" style="text-align: center;"></div><div style="display: flex;"><button class="FlatButton___smA9j Button__primary___3lEUj" style="flex: 1 1 0%;">Continue</button></div></div></div></div><h1>User Management</h1><div class="ColumnGroup___1n9_J"><div class="ColumnGroup_Column___3P9TJ" style="width: 60%;"><table class="Table___2QLJL Table__tiger___Dtaf7"><thead><tr><th>Name</th><th>Phone no.</th><th>Suburb</th><th>Tickets</th><th>Status</th><th></th></tr></thead><tbody><tr><td>Albus Dumbledore</td><td>0455556666</td><td>Wizardsville</td><td>0 Tickets</td><td>XERO</td><td><div style="width: 100px;"></div></td></tr><tr><td>Harry Potter</td><td>0412341234</td><td>Hogwarts</td><td>2 Tickets</td><td>XERO</td><td><div style="width: 100px;"></div></td></tr><tr><td>Severus Snape</td><td>0499888777</td><td>Nowhere Town</td><td>1 Tickets</td><td>XERO</td><td><div style="width: 100px;"></div></td></tr><tr><td>Voldemort Pickle</td><td>0466666666</td><td>Warlock town</td><td>0 Tickets</td><td>ADHOC</td><td><div style="width: 100px;"><button class="CloseButton___1FBvl Button__control___1xE3y" style="color: red; float: right;">✕</button><div class="Icon___2HKDE"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjEzNjUgMjQ0NS4zMzEgMzAgMzAiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICM5OTc4Y2U7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgZmlsbDogI2ZmZjsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPGcgaWQ9Imdyb3VwLTY3MiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQyIDE2MzYpIj4KICAgIDxjaXJjbGUgaWQ9ImVsbGlwc2UiIGNsYXNzPSJjbHMtMSIgY3g9IjE1IiBjeT0iMTUiIHI9IjE1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDIzIDgwOS4zMzEpIi8+CiAgICA8ZyBpZD0iZ3JvdXAtNTY2IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDI1LjUyMSA4MjAuNjc1KSI+CiAgICAgIDxnIGlkPSJncm91cC01NjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiPgogICAgICAgIDxnIGlkPSJncm91cC01NjQiPgogICAgICAgICAgPGcgaWQ9Imdyb3VwLTU2MyI+CiAgICAgICAgICAgIDxnIGlkPSJncm91cC01NjIiPgogICAgICAgICAgICAgIDxyZWN0IGlkPSJyZWN0YW5nbGUiIGNsYXNzPSJjbHMtMiIgd2lkdGg9IjQuNjY0IiBoZWlnaHQ9IjEuNTEzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDIuODk5KSIvPgogICAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoIiBjbGFzcz0iY2xzLTIiIGQ9Ik01LjUsMTYuMTg1VjlsNS4xNjgsMy42NTVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMS4wODggLTkpIi8+CiAgICAgICAgICAgICAgPGcgaWQ9Imdyb3VwLTU2MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTUuMjUyKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iZ3JvdXAtNTYwIj4KICAgICAgICAgICAgICAgICAgPGcgaWQ9Imdyb3VwLTU1OSI+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9InJlY3RhbmdsZS0yIiBkYXRhLW5hbWU9InJlY3RhbmdsZSIgY2xhc3M9ImNscy0yIiB3aWR0aD0iNC42NjQiIGhlaWdodD0iMS41MTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkuNjk1IDQuMzQ5KSByb3RhdGUoMTgwKSIvPgogICAgICAgICAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoLTIiIGRhdGEtbmFtZT0icGF0aCIgY2xhc3M9ImNscy0yIiBkPSJNMTkuMjY4LDl2Ny4xODVMMTQuMSwxMi42NTVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTQuMSAtOSkiLz4KICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==" role="presentation"></div></div></td></tr></tbody></table></div><div class="ColumnGroup_Column___3P9TJ"><div class="UserPage_Title___1mmHg"><h3>New Ad Hoc User</h3><div class="UserPage_Title_AddNewButton___24PkK"><button class="FlatButton___smA9j Button__secondary___3GXVp Button__round___1Ikoq">Add New Ad Hoc User</button></div></div><div class="Container___3qvDC Card___3GHvW"><form class="FormValidation___24g9y"><div class="InputGroup___2R5OT InputGroup__horizontal___15tCe"><div><label><strong class="InputLabel___HKy_J">First Name</strong></label><div class="ValidatedInput___3HadW"><input required="" class="Input___2RIGH Input___Xa6B5" value=""><div class="InputStatus___2txAy"><div class="InputStatus_Icon___1Qki3 Icon__required___3jVTt"><span>✱</span></div><div class="Container___3qvDC Card___3GHvW Card__thin___1B2im InputStatus_Message___sqJzS"><ul></ul></div></div></div></div><div><label><strong class="InputLabel___HKy_J">Last Name</strong></label><div class="ValidatedInput___3HadW"><input required="" class="Input___2RIGH Input___Xa6B5" value=""><div class="InputStatus___2txAy"><div class="InputStatus_Icon___1Qki3 Icon__required___3jVTt"><span>✱</span></div><div class="Container___3qvDC Card___3GHvW Card__thin___1B2im InputStatus_Message___sqJzS"><ul></ul></div></div></div></div></div><div class="InputGroup___2R5OT InputGroup__horizontal___15tCe"><div><label><strong class="InputLabel___HKy_J">Contact Number</strong></label><div class="ValidatedInput___3HadW"><input class="Input___2RIGH Input___Xa6B5" value=""><div class="InputStatus___2txAy"><div class="InputStatus_Icon___1Qki3 Icon__valid___3zEVR"><span>✓</span></div><div class="Container___3qvDC Card___3GHvW Card__thin___1B2im InputStatus_Message___sqJzS"><ul></ul></div></div></div></div><div><label><strong class="InputLabel___HKy_J">email</strong></label><div class="ValidatedInput___3HadW"><input type="email" required="" class="Input___2RIGH Input___Xa6B5" value=""><div class="InputStatus___2txAy"><div class="InputStatus_Icon___1Qki3 Icon__required___3jVTt"><span>✱</span></div><div class="Container___3qvDC Card___3GHvW Card__thin___1B2im InputStatus_Message___sqJzS"><ul></ul></div></div></div></div></div><hr><div class="InputGroup___2R5OT InputGroup__horizontal___15tCe"><div><div style="width: 100%; height: 250px;"><div style="width: 100%; height: 100%; margin: 0px; padding: 0px; position: relative;"><div style="width: 100%; height: 100%; left: 0px; top: 0px; margin: 0px; padding: 0px; position: absolute; background-color: rgb(229, 227, 223); overflow: hidden;"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0); will-change: transform;"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; position: absolute; left: -132px; top: -195px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -132px; top: 61px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 124px; top: -195px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 124px; top: 61px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><div style="overflow: hidden;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="position: absolute; left: -132px; top: -195px; transition: opacity 200ms ease-out;"><img src="./user-management_files/vt" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -132px; top: 61px; transition: opacity 200ms ease-out;"><img src="./user-management_files/vt(1)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 124px; top: -195px; transition: opacity 200ms ease-out;"><img src="./user-management_files/vt(2)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 124px; top: 61px; transition: opacity 200ms ease-out;"><img src="./user-management_files/vt(3)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div class="gm-style-pbc" style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%; transition-duration: 0.3s; opacity: 0; display: none;"><p class="gm-style-pbt">Use two fingers to move the map</p></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 4; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"><div style="background-color: transparent; position: absolute; left: 0.260304px; top: -0.427117px; width: 2560px; height: 1440px;"><div data-reactroot="" style="width: 100%; height: 100%; left: 0px; top: 0px; margin: 0px; padding: 0px; position: absolute;"></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=-37.816279,144.965705&amp;z=15&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img src="./user-management_files/google_white5.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 245px; height: 148px; position: absolute; left: 5px; top: 35px;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;">Map data ©2016 Google</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="./user-management_files/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 71px; bottom: 0px; width: 121px;"><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map Data</a><span style="">Map data ©2016 Google</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2016 Google</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; -webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><div style="width: 25px; height: 25px; overflow: hidden; display: none; margin: 10px 14px; position: absolute; top: 0px; right: 0px;"><img src="./user-management_files/sv9.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 175px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px; display: none;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_new" title="Report errors in the road map or imagery to Google" href="https://www.google.com/maps/@-37.816279,144.9657051,15z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div><div class="gmnoprint gm-bundled-control" draggable="false" controlwidth="28" controlheight="55" style="margin: 10px; -webkit-user-select: none; position: absolute; right: 28px; top: 88px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 0px;"><div draggable="false" style="-webkit-user-select: none; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 28px; height: 55px;"><div title="Zoom in" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="./user-management_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; background-color: rgb(230, 230, 230); top: 0px;"></div><div title="Zoom out" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="./user-management_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div></div></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="0" controlheight="0" style="margin: 10px; -webkit-user-select: none; position: absolute; display: none; bottom: 14px; right: 0px;"><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="Rotate map 90 degrees" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; cursor: pointer; background-color: rgb(255, 255, 255); display: none;"><img src="./user-management_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="./user-management_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;"><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Show street map" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; min-width: 22px; font-weight: 500;">Map</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; left: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Show street map with terrain" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="./user-management_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Terrain</label></div></div></div><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Show satellite imagery" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-left: 0px; min-width: 40px;">Satellite</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; right: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Show imagery with street names" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img src="./user-management_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Labels</label></div></div></div></div></div></div></div></div><br><br><div><label><strong class="InputLabel___HKy_J">Address</strong></label><input type="text" placeholder="Address..." value="NSW" class="Input___2RIGH" autocomplete="off"></div></div></div><div class="InputGroup___2R5OT"><label><strong class="InputLabel___HKy_J"><input type="checkbox" value="on"><!-- react-text: 271 -->Team Leader Qualified<!-- /react-text --></strong></label><br><h3>Tickets</h3><div class="AttachmentManager___1cHf2"><div class="Overlay___Gk61i"><div class="Dialog___2KxsN"><div class="Dialog_Head___2Cx3u"><div>Upload files</div><button class="CloseButton___1FBvl">✕</button></div><div class="Dialog_Body___1NTjI"><div class="Container___3qvDC"></div><div style="display: flex;"><button class="FlatButton___smA9j Button__primary___3lEUj" style="flex: 1 1 0%;">Upload</button></div></div></div></div><div>Drag and drop files into this box to upload.</div><input type="file" multiple="" style="display: none;"></div><label><strong class="InputLabel___HKy_J"><input type="checkbox" value="on"><!-- react-text: 289 -->Auditor<!-- /react-text --></strong></label><label><strong class="InputLabel___HKy_J"><input type="checkbox" value="on"><!-- react-text: 293 -->Administration<!-- /react-text --></strong></label></div><div class="FormValidation__SubmitButton___3TEHo"><button class="FlatButton___smA9j Button__round___1Ikoq Button__disabled___37UgC">Submit</button></div></form></div></div></div></div></div></div><script>window.__INITIAL_STATE__ = {"auth":{"userAuth":{"user":{"user":"gridstone"},"errorMessage":null,"authToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE0NzM4NDMyNTMuMzk1LCJuYmYiOjE0NzM4NDMyNTMuMzk1LCJ1c2VyIjoiZ3JpZHN0b25lIiwiZXhwIjoxNDc0Mjc1MjUzfQ.BlU-1iQv1gn6wK5xT_i88Yk2g8GWEajz1v2IuhgPzXc","refreshToken":"ABCDEF"}},"jobs":{"byId":{},"updating":{"isUpdating":{},"errorMessage":{}}},"addJob":{"submitting":false,"errorMessage":null},"clients":{"byId":{}},"contacts":{"byId":{}},"users":{"byId":{},"activeUsers":{},"userRoles":[]},"vehicles":{"byId":{}},"vehicleLocations":{"byId":{}},"toasts":{"byId":{},"ids":{}}};</script><script src="./user-management_files/bundle.client.js"></script><div class="pac-container pac-logo" style="display: none; width: 297px; position: absolute; left: 578px; top: 844px;"><div class="pac-item"><span class="pac-icon pac-icon-marker"></span><span class="pac-item-query"><span class="pac-matched">NSW</span></span><span>Australia</span></div><div class="pac-item"><span class="pac-icon pac-icon-marker"></span><span class="pac-item-query">​​<span class="pac-matched">NSW</span> Registry of Births Deaths &amp; Marriages</span><span>Regent Street, Chippendale, New South Wales, Australia</span></div><div class="pac-item"><span class="pac-icon pac-icon-marker"></span><span class="pac-item-query"><span class="pac-matched">NSW</span> National Parks &amp; Wildlife Services</span><span>Goulburn Street, Sydney, New South Wales, Australia</span></div><div class="pac-item"><span class="pac-icon pac-icon-marker"></span><span class="pac-item-query"><span class="pac-matched">NSW</span> Police Force Academy</span><span>McDermott Drive, Goulburn, New South Wales, Australia</span></div><div class="pac-item"><span class="pac-icon pac-icon-marker"></span><span class="pac-item-query"><span class="pac-matched">NSW</span> Golf Club</span><span>Anzac Parade, La Perouse, New South Wales, Australia</span></div></div></body></html>

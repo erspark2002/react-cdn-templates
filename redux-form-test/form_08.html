@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- 
-NOTES: 
+<!--
+NOTES:
   multiple components
   no refs
   uses Redux instead of internal state
 -->
-<html> 
+<html>
   <head>
     <meta charset="utf-8">
     <!-- CDN Resources (1.1MB) -->
@@ -20,7 +20,14 @@ NOTES:
  -->
 
     <script src="lib/react-with-addons-15.0.0.js"></script>
-    <script src="lib/redux-3.0.4.js"></script>
+
+<!-- Note: passing enhancer as last argument requires redux@>=3.1.0. For older versions apply it like here or here.
+ -->
+
+    <!-- <script src="lib/redux-3.0.4.js"></script> -->
+    <script src="lib/redux-3.1.0.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.1.0/redux.js"></script> -->
+
     <!-- NOTE: non-minified lib didn't work!!! -->
     <script src="lib/react-redux-4.4.5.min.js"></script>
     <script src="lib/react-dom-0.14.0.js"></script>
@@ -31,9 +38,12 @@ NOTES:
 
 <!--     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/redux-form/5.2.3/redux-form.js"></script>
  -->
-    <script src="lib/redux-form-5.3.1.js"></script>
-    <!-- try 5.3.1 -->
 
+    <!-- <script src="lib/redux-form-5.3.1.js"></script> -->
+    <script src="lib/redux-form-6.0.5.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/redux-form/6.0.2/redux-form.min.js"></script> -->
+
+    <script src="lib/redux-logger-2.6.1.js"></script>
 
     <script src="lib/babel-core-5.8.34.min.js"></script>
 
@@ -53,7 +63,7 @@ NOTES:
   <body>
     <div id="app">Loading...</div>
 
-    <script type="text/babel" src="form_06.js"> </script>
-    <script type="text/javascript">console.log('start[06]');</script>
+    <script type="text/babel" src="form_08.js"> </script>
+    <script type="text/javascript">console.log('start[08]');</script>
   </body>
 </html>

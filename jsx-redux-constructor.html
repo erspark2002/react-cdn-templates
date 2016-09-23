@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <script src="https://fb.me/react-with-addons-15.0.0.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.0.4/redux.min.js"></script>
+		<script src="https://fb.me/react-dom-0.14.0.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+		<title>React Template with CDN Resources - JSX, redux</title>
+	</head>
+	<body>
+		<div id="app"></div>
+
+		<script type="text/babel">
+			console.log('start');
+			let Component = React.Component;
+
+			const counter = (state = 0, action) => {
+			  console.log('reducer state:', state);
+			  console.log('reducer action:', action);
+			  switch(action.type){
+				case 'INCREMENT':
+				  return state + 1;
+				case 'DECREMENT':
+				  return state - 1;
+				default:
+				  return state;
+			  }
+			};
+			//created a basic counter using redux
+			const { createStore } = Redux;
+			// same as
+			// var createStore = Redux.createStore; //es5
+			// import { createStore } from 'redux' //babel import
+
+			const store = createStore(counter);
+			// created a new reducer using pure function counter
+			// creating a react dom component Counter <Counter />
+			const Counter = ({
+			  value,
+			  onIncrement,
+			  onDecrement
+			}) => (
+			  <div>
+				<h1>{value}</h1>
+				<button onClick={onIncrement}>+</button>
+				<button onClick={onDecrement}>-</button>
+			  </div>
+			);
+
+			class App extends Component {
+				render() {
+					return (
+						<Counter value={store.getState()}
+							onIncrement={() =>
+							  store.dispatch({
+								type : 'INCREMENT'
+							  })
+							}
+							onDecrement={() =>
+							  store.dispatch({
+								type : 'DECREMENT'
+							  })
+							}
+						/>
+					);
+				}
+			}
+
+			const render = () => {
+				ReactDOM.render(<App/>,document.getElementById('app'));
+			};
+
+			store.subscribe(render);
+			render();
+			console.log('done');
+		</script>
+	</body>
+</html>
