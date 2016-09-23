@@ -108,70 +108,8 @@ class DeepForm extends Component {
 						<legend>Shipping</legend>
 						<Address {...shipping}/>
 					</fieldset>
-					<fieldset>
-						<legend>Billing</legend>
-						<Address {...billing}/>
-					</fieldset>
 				</div>
-				<div>
-					<button type="button" onClick={() => {
-						children.addField()    // pushes empty child field onto the end of the array
-					}}><i/> Add Child
-					</button>
-					<button type="button" onClick={() => {
-						children.addField({     // pushes child field with initial values onto the end of the array
-							name: 'Bobby Tables',
-							age: 13,
-							awards: [ 'Input Sanitation', 'Best XKCD Meme' ]
-						})
-					}}><i/> Add Bobby
-					</button>
-				</div>
-				{!children.length && <div>No Children</div>}
-				{children.map((child, index) => <div key={index}>
-					<div>
-						<label>Child #{index + 1}</label>
-						<div>
-							<PureInput type="text" placeholder="Child Name" field={child.name}/>
-						</div>
-						<div>
-							<PureInput type="text" placeholder="Child Age" field={child.age}/>
-						</div>
-						<div>
-							<button type="button" onClick={() => {
-								child.awards.addField();  // pushes empty award field onto the end of the array
-							}}><i/> Add Award
-							</button>
-							<div>
-								<button type="button" disabled={index === 0} onClick={() => {
-									children.swapFields(index, index - 1);  // swap field with it's predecessor
-								}}><i/>
-								</button>
-								<button type="button" disabled={index === children.length - 1} onClick={() => {
-									children.swapFields(index, index + 1);  // swap field with it's successor
-								}}><i/>
-								</button>
-							</div>
-							<button type="button" onClick={() => {
-								children.removeField(index);  // remove from index
-							}}><i/> Remove
-							</button>
-						</div>
-					</div>
-					{child.awards.map((award, awardIndex) => <div key={awardIndex}>
-						<div>
-							<label>Award #{awardIndex + 1}</label>
-							<div>
-								<PureInput type="text" placeholder="Award" field={award}/>
-							</div>
-							<div>
-								<button type="button" onClick={() => {
-									child.awards.removeField(awardIndex); // remove from awardIndex
-								}}><i/></button>
-							</div>
-						</div>
-					</div>)}
-				</div>)}
+
 				<div>
 					<button type="submit" disabled={submitting || invalid}>
 						{submitting ? <i/> : <i/>} Submit
