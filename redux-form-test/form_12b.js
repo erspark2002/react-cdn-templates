@@ -62,9 +62,6 @@ const fields = [
 	'shipping.street',
 	'shipping.city',
 	'shipping.phones[]',
-	'billing.street',
-	'billing.city',
-	'billing.phones[]',
 	'children[].name',
 	'children[].age',
 	'children[].awards[]'
@@ -79,7 +76,7 @@ class DeepForm extends Component {
 	render() {
 		const {
 			addValue,
-			fields: { name, shipping, billing, children },
+			fields: { name, shipping, children },
 			handleSubmit,
 			resetForm,
 			invalid,
@@ -219,7 +216,6 @@ const validateDeepForm = data => {
 		errors.name = 'Required';
 	}
 	errors.shipping = validateAddress(data.shipping);
-	errors.billing = validateAddress(data.billing);
 	errors.children = data.children.map(validateChild);
 	return errors;
 };
