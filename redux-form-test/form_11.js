@@ -1,9 +1,49 @@
 const { Component } = React;
 const { Provider, connect } = ReactRedux;
-const { combineReducers, createStore } = Redux;
+const { combineReducers, createStore, compose } = Redux;
 const { reducer: formReducer, reduxForm } = ReduxForm;
 
+//---
+// Thunk and chrome reactDevTools
+const {applyMiddleware} = Redux;
+const thunk = ReduxThunk.default;
+// const thunk = null;
+
 const notes = 'NOTES: Uses <input> component - Synchronous Validation Example. Can specified required, and custom validator.';
+
+const imports = {
+	Component,
+	Provider,
+	connect,
+	combineReducers,
+	createStore,
+	formReducer,
+	reduxForm,
+	thunk
+};
+const nullCheck = (obj) => {
+	const keys = Object.keys(obj);
+	console.log('#keys:', keys);
+	for (const k of keys) {
+		if (!obj[k] || typeof obj[k] === 'undefined') {
+			console.log('###############################');
+			console.log(`# KEY ${k} IS NOT DEFINED`);
+			console.log('###############################');
+		} else {
+			// console.log(`#key ${k} IS defined. value: ${obj[k]}`);
+			// console.log(`#key ${k} IS defined.`);
+			const value = obj[k].toString();
+			if (value.indexOf('native') > 0) {
+				console.log('###############################');
+				console.log(`# WARNING. KEY ${k} refers to native code`);
+				console.log('###############################');
+			}
+		}
+	}
+};
+nullCheck(imports);
+
+//---------------------
 
 /*
 Form data is passed to validate() on every keypress.
@@ -61,9 +101,7 @@ const emailValidator = (message = 'Please enter a valid email address') => value
 		return message;
 	}
 };
-const numberValidator = (message = 'Please enter a number') => (value, values) => {
-	console.log('#numberValidator value:', value);
-	console.log('#values:', values);
+const numberValidator = (message = 'Please enter a number') => value => {
 	if (isNaN(Number(value))) {
 		return message;
 	}
@@ -79,8 +117,7 @@ const validate = rules => values => {
 		if((fieldRules.required && !fieldValue) || (fieldValue && fieldValue.trim() === '')) {
 			errors[fieldName] = `Please enter ${fieldName}`;
 		} else if(fieldValue && fieldRules.validator) {
-			// const message = fieldRules.validator(fieldValue);
-			const message = fieldRules.validator(fieldValue, values);
+			const message = fieldRules.validator(fieldValue);
 			message && (errors[fieldName] = message);
 		}
 	});
@@ -90,28 +127,10 @@ const validate = rules => values => {
 // -------------------
 // COMPONENTS
 // -------------------
-
-class Button extends Component {
-	constructor() {
-		super();
-		console.log('--> Button constructor called.');
-	}
-
-	render() {
-		return(
-			<button>Submit</button>
-		);
-	}
-}
-
 class ContactForm extends Component {
 	constructor(props) {
 		super(props);
 		this.handleSubmit = this.handleSubmit.bind(this);
-
-		this.state = {
-			showButton: true
-		};
 	}
 	// called when valid.
 	handleSubmit(data) {
@@ -124,22 +143,15 @@ class ContactForm extends Component {
 
 	}
 
-	toggleButton() {
-		this.setState({showButton: !this.state.showButton});
-	}
-
 	render() {
 		const {fields: {firstName, lastName, email, age}, handleSubmit, onSubmit, errors} = this.props;
-
-		// const showButton = this.state.showButton;
-
 		return (
 			<div>
 				<p>{notes}</p>
 				<form onSubmit={handleSubmit(this.handleSubmit)}>
 					<label>First Name</label>
 					<div>
-						<input type="text" placeholder="First Name" {...firstName}/>
+						<input type="text" placeholder="First Name" isRequired {...firstName}/>
 						<div>{firstName.touched && errors.firstName}</div>
 					</div>
 					<p></p>
@@ -155,13 +167,8 @@ class ContactForm extends Component {
 						<div>{age.touched && errors.age}</div>
 					</div>
 					<p></p>
-					<button type="submit" onClick={() => this.toggleButton()}>Toggle</button>
+					<button type="submit">Submit</button>
 				</form>
-
-				{
-					this.state.showButton && (<Button />)
-				}
-
 			</div>
 		);
 	}
@@ -195,7 +202,44 @@ const reducers = {
 	form: formReducer
 };
 const reducer = combineReducers(reducers);
-const store = createStore(reducer);
+
+//-------
+// const store = createStore(reducer);
+window.thunk = thunk;
+
+let devTools = f => f;
+if (window && window.devToolsExtension) {
+	devTools = window.devToolsExtension();
+}
+
+// NOTE: Get 'no store found' if initialState passed as 2nd param.
+
+const initialState = {
+	form: {}
+};
+
+const store = createStore(
+  reducer,
+  // initialState,
+  applyMiddleware(thunk),
+  devTools
+);
+
+
+// dan
+// const store = createStore(
+// 	reducer,
+// 	initialState,
+// 	compose(
+// 		applyMiddleware(thunk),
+// 		devTools
+// 	)
+// );
+console.log('#store:', store);
+
+//-------
+
+
 class App extends Component {render() {return(<ContactFormConnected />)}}
 ReactDOM.render(
 	<Provider store={store}>
