@@ -83,6 +83,10 @@ class DeepForm extends Component {
 			submitting
 		} = this.props;
 
+		console.log('-------- DeepForm render ---------');
+		console.log('  #this.state:', this.state);
+		console.log('  #this.props:', this.props);
+
 		return (<form onSubmit={handleSubmit(data=>this._onSubmit(data))}>
 				<div>
 					<button type="button" onClick={() => {
@@ -154,6 +158,12 @@ class Address extends Component {
 
 	render() {
 		const { street, city, phones } = this.props;
+
+		console.log('-------- Address render ---------');
+		console.log('  #this.state:', this.state);
+		console.log('  #this.props:', this.props);
+
+
 		return (<div>
 				<div>
 					<label>Street</label>
@@ -265,19 +275,9 @@ if (window && window.devToolsExtension) {
 	devTools = window.devToolsExtension();
 }
 
-// NOTE: Get 'no store found' if initialState passed as 2nd param.
-
 const initialState = {
 	form: {}
 };
-
-// const store = createStore(
-// 	reducer,
-// 	initialState,
-// 	applyMiddleware(thunk),
-// 	devTools
-// );
-
 
 // dan
 const store = createStore(

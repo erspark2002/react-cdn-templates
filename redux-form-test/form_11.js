@@ -1,4 +1,4 @@
-const { Component } = React;
+const { Component, PropTypes } = React;
 const { Provider, connect } = ReactRedux;
 const { combineReducers, createStore, compose } = Redux;
 const { reducer: formReducer, reduxForm } = ReduxForm;
@@ -144,7 +144,16 @@ class ContactForm extends Component {
 	}
 
 	render() {
-		const {fields: {firstName, lastName, email, age}, handleSubmit, onSubmit, errors} = this.props;
+		const {fields: {firstName, lastName, email, age, phones}, handleSubmit, onSubmit, errors} = this.props;
+
+		console.log('-------- ContactForm render ---------');
+		console.log('  #this.state:', this.state);
+		console.log('  #this.props:', this.props);
+
+		if (!phones.length) {
+			phones.addField();
+		}
+
 		return (
 			<div>
 				<p>{notes}</p>
@@ -167,12 +176,32 @@ class ContactForm extends Component {
 						<div>{age.touched && errors.age}</div>
 					</div>
 					<p></p>
+
+					<label>Phones</label>
+					<p></p>
+					{phones.map((phone, index)=>
+						<div key={index}>
+							<input type="text" placeholder="Phone Number" {...phone}/>
+						</div>
+					)}
+					<button onClick={(e) => {
+						e.preventDefault();
+						phones.addField();
+					}}>Add Phone</button>
+					<p></p>
 					<button type="submit">Submit</button>
 				</form>
 			</div>
 		);
 	}
 }
+
+ContactForm.propTypes = {
+	firstName: PropTypes.object,
+	email: PropTypes.object,
+	age: PropTypes.object,
+	phones: PropTypes.arrayOf(PropTypes.object)
+};
 
 // validation rules are separate from form, so form can be reused.
 const required = true;
@@ -185,8 +214,10 @@ const validationRules = {
 	},
 	age: {
 		validator: numberValidator()
-	}
+	},
+	'phones[]': {}
 };
+
 const getFields = rules => Object.keys(rules);
 const ContactFormConnected = reduxForm({
 	form: 'contact',
@@ -212,29 +243,18 @@ if (window && window.devToolsExtension) {
 	devTools = window.devToolsExtension();
 }
 
-// NOTE: Get 'no store found' if initialState passed as 2nd param.
-
 const initialState = {
 	form: {}
 };
 
 const store = createStore(
-  reducer,
-  // initialState,
-  applyMiddleware(thunk),
-  devTools
+	reducer,
+	initialState,
+	compose(
+		applyMiddleware(thunk),
+		devTools
+	)
 );
-
-
-// dan
-// const store = createStore(
-// 	reducer,
-// 	initialState,
-// 	compose(
-// 		applyMiddleware(thunk),
-// 		devTools
-// 	)
-// );
 console.log('#store:', store);
 
 //-------
