@@ -71,6 +71,11 @@ const fields = [
 ];
 
 class DeepForm extends Component {
+	_onSubmit(data) {
+		console.log('-------- _onSubmit ---------');
+		console.log('#data:', data);
+	}
+
 	render() {
 		const {
 			addValue,
@@ -80,7 +85,8 @@ class DeepForm extends Component {
 			invalid,
 			submitting
 		} = this.props;
-		return (<form onSubmit={handleSubmit}>
+
+		return (<form onSubmit={handleSubmit(data=>this._onSubmit(data))}>
 				<div>
 					<button type="button" onClick={() => {
 						for (let childIndex = 0; childIndex < 30; childIndex++) {
